@@ -188,24 +188,27 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
+        className: "glHeader",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 6
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        className: "title",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 7
         },
         __self: this
-      }, this.props.header), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+      }, this.props.title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "subtitle",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8
         },
         __self: this
-      }, this.props.title));
+      }, this.props.subtitle));
     }
   }]);
 
@@ -261,14 +264,15 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "wrapper",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
         },
         __self: this
       }, _static_style__WEBPACK_IMPORTED_MODULE_8__["default"], react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        header: this.props.header,
         title: this.props.title,
+        subtitle: this.props.subtitle,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
@@ -10134,47 +10138,120 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _static_Image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../static/Image */ "./static/Image.js");
 var _jsxFileName = "/Users/arihito/Dropbox/Public/React/Next-ReduxThunk201904/pages/index.js";
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    header: "Next",
     title: "Top page",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    subtitle: "on Next.js by React Flamework",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
     },
     __self: this
   }, "Welcome to Next.js"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/other",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "Other")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Counter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "btn",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
+  }, "Other")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_static_Image__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    fname: "logo.png",
+    size: "500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Counter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
   }));
 });
+
+/***/ }),
+
+/***/ "./static/Image.js":
+/*!*************************!*\
+  !*** ./static/Image.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+var _jsxFileName = "/Users/arihito/Dropbox/Public/React/Next-ReduxThunk201904/static/Image.js";
+
+
+var Image =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Image, _Component);
+
+  function Image(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Image);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Image).call(this, props));
+    _this.fname = "./static/" + props.fname;
+    _this.size = props.size + "px";
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Image, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: this.fname,
+        width: this.size,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      });
+    }
+  }]);
+
+  return Image;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Image);
 
 /***/ }),
 
@@ -10198,7 +10275,7 @@ var _jsxFileName = "/Users/arihito/Dropbox/Public/React/Next-ReduxThunk201904/st
     lineNumber: 1
   },
   __self: undefined
-}, "\nhtml {\n  /* \u521D\u671F\u57FA\u672C\u30D5\u30A9\u30F3\u30C8 */\n  font-family: sans-serif;\n  /* rem\u306E\u30D5\u30A9\u30F3\u30C8\u57FA\u6E96\u5358\u4F4D(10px) \u30D6\u30E9\u30A6\u30B6\u306E\u30B5\u30A4\u30BA\u8A2D\u5B9A\u306B\u5BFE\u5FDC\u3059\u308B%\u3067\u6307\u5B9A */\n  font-size: 62.5%;\n  /* \u30B9\u30DE\u30DB\u6A2A\u4F4D\u7F6E\u306E\u6587\u5B57\u30B5\u30A4\u30BA\u5909\u66F4\u306A\u3057 */\n  -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n  /* OSX\u306ESafari/Chrome\u306E\u6587\u5B57\u306E\u30A2\u30CB\u30E1\u30FC\u30B7\u30E7\u30F3\u6642\u306E\u30C1\u30E9\u30C4\u30AD\u89E3\u9664*/\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  /* html\u4EE5\u4E0B\u5168\u3066\u306E\u8981\u7D20\u306B\u5BFE\u3057\u3066 */\n  height: 100%;\n  * {\n    /* padding/border\u5DEE\u3057\u5F15\u304D\u306A\u3057 */\n    box-sizing: border-box;\n    /* \u5185\u5916\u4F59\u767D\u3092\u524A\u9664 */\n    margin: 0;\n    padding: 0;\n  }\n}\nbody {\n  font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, \"Helvetica Neue\", \"Yu Gothic\", YuGothic, \"\u30D2\u30E9\u30AE\u30CE\u89D2\u30B4 ProN W3\", Hiragino Kaku Gothic ProN, Arial, \"\u30E1\u30A4\u30EA\u30AA\", Meiryo, sans-serif;\n  /* \u57FA\u672C\u306E\u6587\u5B57\u30B5\u30A4\u30BA */\n  font-size: 1.4rem;\n  /* \u9ED2\u306E\u6587\u5B57\u8272\u306F\u30B3\u30F3\u30C8\u30E9\u30B9\u30C8\u304C\u5F37\u3044\u306E\u3067\u3084\u3084\u6FC3\u3044\u30B0\u30EC\u30FC */\n  color: #333;\n  /* \u5168\u3066\u306E\u6587\u5B57\u306E\u4E0A\u4E0B\u306E\u884C\u9593\u4F59\u767D\u3092\u524A\u9664 */\n  line-height: 1;\n  /* \u5168\u4F53\u80CC\u666F\u8272(\u4E0A\u8272,\u4E0B\u8272) */\n  background: linear-gradient(#fff,#ccc);\n  min-height: 100%;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-weight: normal;\n  line-height: 1;\n  font-family: $themeFont;\n  @media screen and (max-width: 768px) {\n    /* \u30B9\u30DE\u30DB\u6642\u306F\u6539\u884C\u3092\u9664\u53BB */\n    br {\n      display: none;\n    }\n  }\n}\np {\n  line-height: 2.4;\n  /* \u5B57\u8A70\u3081 */\n  font-feature-settings: \"palt\" 1;\n  /* \u4E21\u7AEF\u63C3\u3048 */\n  text-align: justify;\n}\nul,ol {\n  li {\n    list-style-type: none;\n    &.active {\n      background-color: #eee;\n    }\n  }\n}\n/* \u753B\u50CF\u306E\u8868\u793A\u5D29\u308C\u3092\u8ABF\u6574 */\nimg {\n  /* \u753B\u50CF\u306E\u4E0B\u306E\u9699\u9593\u3092\u53D6\u308A\u9664\u304F */\n  display: block;\n  height: auto;\n  /* \u89AA\u8981\u7D20\u304B\u3089\u306E\u306F\u307F\u51FA\u3057\u3092\u9632\u3050 */\n  max-width: 100%;\n  border: 0;\n  /* \u6BD4\u7387\u306E\u5DEE\u304B\u3089\u51FA\u308B\u4F59\u3063\u305F\u9818\u57DF\u3092\u30C8\u30EA\u30DF\u30F3\u30B0 */\n  object-fit: cover;\n  /* x\u8EF80%\u5DE6\u63C3\u3048100%\u53F3\u63C3\u3048 y\u8EF80%\u4E0A\u63C3\u3048100%\u4E0B\u63C3\u3048 */\n  object-position: 50% 20%;\n}\na {\n  background: transparent;\n  text-decoration: none;\n  color: #333;\n  &:hover {\n    color: #333;\n  }\n}\n:hover {\n  // \u30DB\u30D0\u30FC\u306B\u6ED1\u3089\u304B\u306A\u30A2\u30CB\u30E1\u30FC\u30B7\u30E7\u30F3\n  transition: all ease 0.4s;\n}\ntable {\n  border-collapse: collapse;\n  width: 100%;\n}\nth {\n  text-align: left;\n  vertical-align: top;\n}\n/*************************/\n\nheader {\n  font-size: 64px;\n  font-weight: bold;\n  text-align: right;\n  letter-spacing: -8px;\n  color: #ddf;\n  margin: -32px 5px;\n}\n\nfooter {\n  color: #99c;\n  font-size: 12px;\n  text-align: right;\n  border-bottom: 1px solid #99c;\n  margin: 50px 0 10px 0;\n  position: relative;\n  bottom: 10px;\n  right: 10px;\n  left: 10px;\n}\nh1 {\n  font-size: 22px;\n  font-weight: bold;\n  text-align: left;\n  letter-spacing: 0px;\n  color: #77a;\n  margin: 0 0 50px 0;\n}\np {\n  margin: 0;\n  color: #669;\n  font-size: 16px;\n}\n"));
+}, "\nhtml {\n  font-family: sans-serif;\n  font-size: 62.5%;\n  -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n  height: 100%;\n}\nhtml * {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, \"Helvetica Neue\", \"Yu Gothic\", YuGothic, \"\u30D2\u30E9\u30AE\u30CE\u89D2\u30B4 ProN W3\", Hiragino Kaku Gothic ProN, Arial, \"\u30E1\u30A4\u30EA\u30AA\", Meiryo, sans-serif;\n  font-size: 1.4rem;\n  color: #333;\n  line-height: 1;\n  background: linear-gradient(#fff,#ccc);\n  min-height: 100%;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-weight: normal;\n  line-height: 1;\n  font-family: $themeFont;\n}\np {\n  line-height: 2.4;\n  font-feature-settings: \"palt\" 1;\n  text-align: justify;\n}\nul li {\n  list-style-type: none;\n}\nimg {\n  display: block;\n  height: auto;\n  max-width: 100%;\n  border: 0;\n  object-fit: cover;\n  object-position: 50% 20%;\n}\na {\n  background: transparent;\n  text-decoration: none;\n  color: #333;\n}\na:hover {\n  color: #333;\n}\n:hover {\n  transition: all ease 0.4s;\n}\ntable {\n  border-collapse: collapse;\n  width: 100%;\n}\nth {\n  text-align: left;\n  vertical-align: top;\n}\n/*************************/\n.wrapper {\n  width: 80vw;\n  margin: auto;\n}\n.glHeader {\n  display: flex;\n  padding: 20px 0 15px;\n  border-bottom: 1px dotted #ccc;\n}\n.title {\n  margin-right: 10px;\n}\n.btn {\n  padding: 10px 30px;\n  border-radius: 3px;\n  background: linear-gradient(#fff, #eee);\n  box-shadow: 0 0 3px #ccc;\n}\n.btn:hover {\n  background: linear-gradient(#fafafa, #efefef);\n}\nfooter {\n  color: #ccc;\n  font-size: 10px;\n  text-align: center;\n  border-top: 1px dotted #aaa;\n  margin: 50px 0;\n  padding: 10px 0;\n}\n\np {\n  margin: 0;\n  color: #669;\n  font-size: 16px;\n}\n"));
 
 /***/ }),
 

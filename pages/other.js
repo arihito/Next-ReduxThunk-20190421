@@ -1,8 +1,8 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
-export default () => (<Layout header="Next" title="Other page">
+export default () => (<Layout title="Other page" subtitle="on Next.js by React Flamework">
   <p>This is Other page</p>
-  <Link href="/"><button>Index</button></Link>
+  <Link href="/"><button className="btn">Index</button></Link>
 </Layout>
 );
