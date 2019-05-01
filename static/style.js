@@ -83,7 +83,7 @@ th {
   background: linear-gradient(#fafafa, #efefef);
 }
 footer {
-  color: #ccc;
+  color: #aaa;
   font-size: 10px;
   text-align: center;
   border-top: 1px dotted #aaa;

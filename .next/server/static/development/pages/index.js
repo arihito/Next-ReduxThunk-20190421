@@ -102,17 +102,17 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Counter; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _static_style__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../static/style */ "./static/style.js");
 
 
 
@@ -120,6 +120,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/arihito/Dropbox/Public/React/Next-ReduxThunk201904/components/Counter.js";
+
+
 
 
 var Counter =
@@ -133,51 +135,73 @@ function (_Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Counter);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Counter).call(this, props));
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "msgStyle", {
-      fontSize: "16px",
-      backgourndColor: "#eef",
-      padding: "5px"
-    });
-
-    _this.state = {
-      counter: 0,
-      msg: 'counter: 0'
-    };
     _this.doAction = _this.doAction.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.reset = _this.reset.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Counter, [{
     key: "doAction",
-    value: function doAction() {
-      this.setState(function (state) {
-        var num = state.counter + 1;
-        return {
-          counter: num,
-          msg: "counter: " + num
-        };
+    value: function doAction(e) {
+      if (e.shiftKey) {
+        return this.props.dispatch({
+          type: 'DECREMENT'
+        });
+      } else {
+        return this.props.dispatch({
+          type: 'INCREMENT'
+        });
+      }
+    }
+  }, {
+    key: "reset",
+    value: function reset() {
+      return this.props.dispatch({
+        type: 'RESET'
       });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, _static_style__WEBPACK_IMPORTED_MODULE_8__["default"], react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, this.props.message, ": ", this.props.count), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn",
         onClick: this.doAction,
-        style: this.msgStyle,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
         },
         __self: this
-      }, this.state.msg);
+      }, "Count"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn",
+        onClick: this.reset,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, "Reset"));
     }
   }]);
 
   return Counter;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
-
+Counter = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(function (state) {
+  return state;
+})(Counter);
+/* harmony default export */ __webpack_exports__["default"] = (Counter);
 
 /***/ }),
 
@@ -599,36 +623,6 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
 }
 
 /***/ }),
@@ -1234,15 +1228,15 @@ var _jsxFileName = "/Users/arihito/Dropbox/Public/React/Next-ReduxThunk201904/pa
       lineNumber: 9
     },
     __self: this
-  }, "Other")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_static_Image__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    fname: "logo.png",
-    size: "500",
+  }, "Other")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Counter__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Counter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_static_Image__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    fname: "logo.png",
+    size: "500",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -1335,7 +1329,7 @@ var _jsxFileName = "/Users/arihito/Dropbox/Public/React/Next-ReduxThunk201904/st
     lineNumber: 1
   },
   __self: undefined
-}, "\nhtml {\n  font-family: sans-serif;\n  font-size: 62.5%;\n  -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n  height: 100%;\n}\nhtml * {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, \"Helvetica Neue\", \"Yu Gothic\", YuGothic, \"\u30D2\u30E9\u30AE\u30CE\u89D2\u30B4 ProN W3\", Hiragino Kaku Gothic ProN, Arial, \"\u30E1\u30A4\u30EA\u30AA\", Meiryo, sans-serif;\n  font-size: 1.4rem;\n  color: #333;\n  line-height: 1;\n  background: linear-gradient(#fff,#ccc);\n  min-height: 100%;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-weight: normal;\n  line-height: 1;\n  font-family: $themeFont;\n}\np {\n  line-height: 2.4;\n  font-feature-settings: \"palt\" 1;\n  text-align: justify;\n}\nul li {\n  list-style-type: none;\n}\nimg {\n  display: block;\n  height: auto;\n  max-width: 100%;\n  border: 0;\n  object-fit: cover;\n  object-position: 50% 20%;\n}\na {\n  background: transparent;\n  text-decoration: none;\n  color: #333;\n}\na:hover {\n  color: #333;\n}\n:hover {\n  transition: all ease 0.4s;\n}\ntable {\n  border-collapse: collapse;\n  width: 100%;\n}\nth {\n  text-align: left;\n  vertical-align: top;\n}\n/*************************/\n.wrapper {\n  width: 80vw;\n  margin: auto;\n}\n.glHeader {\n  display: flex;\n  padding: 20px 0 15px;\n  border-bottom: 1px dotted #ccc;\n}\n.title {\n  margin-right: 10px;\n}\n.btn {\n  padding: 10px 30px;\n  border-radius: 3px;\n  background: linear-gradient(#fff, #eee);\n  box-shadow: 0 0 3px #ccc;\n}\n.btn:hover {\n  background: linear-gradient(#fafafa, #efefef);\n}\nfooter {\n  color: #ccc;\n  font-size: 10px;\n  text-align: center;\n  border-top: 1px dotted #aaa;\n  margin: 50px 0;\n  padding: 10px 0;\n}\n\np {\n  margin: 0;\n  color: #669;\n  font-size: 16px;\n}\n"));
+}, "\nhtml {\n  font-family: sans-serif;\n  font-size: 62.5%;\n  -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n  height: 100%;\n}\nhtml * {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, \"Helvetica Neue\", \"Yu Gothic\", YuGothic, \"\u30D2\u30E9\u30AE\u30CE\u89D2\u30B4 ProN W3\", Hiragino Kaku Gothic ProN, Arial, \"\u30E1\u30A4\u30EA\u30AA\", Meiryo, sans-serif;\n  font-size: 1.4rem;\n  color: #333;\n  line-height: 1;\n  background: linear-gradient(#fff,#ccc);\n  min-height: 100%;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-weight: normal;\n  line-height: 1;\n  font-family: $themeFont;\n}\np {\n  line-height: 2.4;\n  font-feature-settings: \"palt\" 1;\n  text-align: justify;\n}\nul li {\n  list-style-type: none;\n}\nimg {\n  display: block;\n  height: auto;\n  max-width: 100%;\n  border: 0;\n  object-fit: cover;\n  object-position: 50% 20%;\n}\na {\n  background: transparent;\n  text-decoration: none;\n  color: #333;\n}\na:hover {\n  color: #333;\n}\n:hover {\n  transition: all ease 0.4s;\n}\ntable {\n  border-collapse: collapse;\n  width: 100%;\n}\nth {\n  text-align: left;\n  vertical-align: top;\n}\n/*************************/\n.wrapper {\n  width: 80vw;\n  margin: auto;\n}\n.glHeader {\n  display: flex;\n  padding: 20px 0 15px;\n  border-bottom: 1px dotted #ccc;\n}\n.title {\n  margin-right: 10px;\n}\n.btn {\n  padding: 10px 30px;\n  border-radius: 3px;\n  background: linear-gradient(#fff, #eee);\n  box-shadow: 0 0 3px #ccc;\n}\n.btn:hover {\n  background: linear-gradient(#fafafa, #efefef);\n}\nfooter {\n  color: #aaa;\n  font-size: 10px;\n  text-align: center;\n  border-top: 1px dotted #aaa;\n  margin: 50px 0;\n  padding: 10px 0;\n}\n\np {\n  margin: 0;\n  color: #669;\n  font-size: 16px;\n}\n"));
 
 /***/ }),
 
@@ -1480,6 +1474,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
 
 /***/ }),
 
