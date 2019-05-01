@@ -82,6 +82,23 @@ th {
 .btn:hover {
   background: linear-gradient(#fafafa, #efefef);
 }
+.total {
+  font-size: 24px;
+}
+.inputtext {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 18px;
+  width: 50px;
+}
+.lists {
+  border-bottom: 1px dotted #666;
+}
+.lists th, .lists td {
+  padding: 4px 10px;
+  font-size: 16px;
+}
 footer {
   color: #aaa;
   font-size: 10px;
@@ -90,7 +107,6 @@ footer {
   margin: 50px 0;
   padding: 10px 0;
 }
-
 p {
   margin: 0;
   color: #669;
