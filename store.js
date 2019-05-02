@@ -1,5 +1,22 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import firebase from 'firebase';
+
+var config = {
+  apiKey: "AIzaSyBQWnTaBv9m5rSvXCWzzYC1Yre5t3WHr7w",
+  authDomain: "nextaddress-20190502.firebaseapp.com",
+  databaseURL: "https://nextaddress-20190502.firebaseio.com",
+  projectId: "nextaddress-20190502",
+  storageBucket: "nextaddress-20190502.appspot.com",
+  messagingSenderId: "718504752258"
+};
+var fireapp
+try {
+  firebase.initializeApp(config);
+} catch (error) {
+  console.error(error.message)
+}
+export default fireapp
 
 // ステート初期値
 const initial = {
@@ -28,10 +45,21 @@ function calcReducer(state = initial, action) {
         number: number2,
         result: result
       };
+    case 'INCREMENT':
+      return {
+        message: 'INCREMENT',
+        count: state.count + 1
+      };
+    case 'DECREMENT':
+      return {
+        message: 'DECREMENT',
+        count: state.count - 1
+      };
     // リセット
     case 'RESET':
       return {
         message: 'RESET',
+        count: initial.count,
         data: [],
         number: [],
         result: 0

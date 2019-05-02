@@ -3,10 +3,8 @@ import Layout from '../components/Layout';
 import Calc from '../components/Calc';
 
 export default () => (
-  <Layout title="Calculator" subtitle="on Next.js by React Flamework">
-    <p>This is Calc page</p>
-    <Link href="/"><button className="btn">Index</button></Link>
-    <Link href="/calc"><button className="btn">Calc</button></Link>
+  <Layout title="Calculator page" subtitle="on Next.js by React Flamework">
+    <p>This is Calc page. Enter number in textbox.</p>
     <Calc />
   </Layout>
 );

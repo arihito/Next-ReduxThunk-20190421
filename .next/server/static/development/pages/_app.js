@@ -1256,7 +1256,7 @@ function (_App2) {
 /*!******************!*\
   !*** ./store.js ***!
   \******************/
-/*! exports provided: initStore */
+/*! exports provided: default, initStore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1266,8 +1266,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase */ "firebase");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_2__);
 
- // ステート初期値
+
+
+var config = {
+  apiKey: "AIzaSyBQWnTaBv9m5rSvXCWzzYC1Yre5t3WHr7w",
+  authDomain: "nextaddress-20190502.firebaseapp.com",
+  databaseURL: "https://nextaddress-20190502.firebaseio.com",
+  projectId: "nextaddress-20190502",
+  storageBucket: "nextaddress-20190502.appspot.com",
+  messagingSenderId: "718504752258"
+};
+var fireapp;
+
+try {
+  firebase__WEBPACK_IMPORTED_MODULE_2___default.a.initializeApp(config);
+} catch (error) {
+  console.error(error.message);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (fireapp); // ステート初期値
 
 var initial = {
   message: 'START',
@@ -1298,11 +1318,24 @@ function calcReducer() {
         number: number2,
         result: result
       };
+
+    case 'INCREMENT':
+      return {
+        message: 'INCREMENT',
+        count: state.count + 1
+      };
+
+    case 'DECREMENT':
+      return {
+        message: 'DECREMENT',
+        count: state.count - 1
+      };
     // リセット
 
     case 'RESET':
       return {
         message: 'RESET',
+        count: initial.count,
         data: [],
         number: [],
         result: 0
@@ -1478,6 +1511,17 @@ module.exports = require("core-js/library/fn/symbol");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "firebase":
+/*!***************************!*\
+  !*** external "firebase" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("firebase");
 
 /***/ }),
 

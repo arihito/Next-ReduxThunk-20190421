@@ -60,6 +60,9 @@ th {
   text-align: left;
   vertical-align: top;
 }
+.btn:link,.btn:hover,.btn:visited,.btn:active,.btn:focus,.btn:focus-ring {
+  ontline: none;
+}
 /*************************/
 .wrapper {
   width: 80vw;
@@ -72,6 +75,14 @@ th {
 }
 .title {
   margin-right: 10px;
+  width: 200px;
+}
+.subtitle {
+  margin-right: 20px;
+}
+.mainImg {
+  mix-blend-mode: screen;
+  width: 60%;
 }
 .btn {
   padding: 10px 30px;
@@ -90,7 +101,7 @@ th {
   border: 1px solid #ccc;
   outline: none;
   font-size: 18px;
-  width: 50px;
+  width: 80px;
 }
 .lists {
   border-bottom: 1px dotted #666;
@@ -111,5 +122,22 @@ p {
   margin: 0;
   color: #669;
   font-size: 16px;
+}
+.firetable {
+  width: 60%;
+}
+.firetable tr {
+  border-bottom: 1px dotted #999;
+}
+.firetable th,.firetable td {
+  padding: 20px;
+  font-size: 18px;
+}
+.firetable th {
+  color: #999;
+  font-size: 15px;
+}
+.firetable tr:nth-child(even) td {
+  background-color: #eee;
 }
 `}</style>

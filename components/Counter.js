@@ -25,9 +25,9 @@ class Counter extends Component {
     return (
       <div>
         {style}
-        <p>{this.props.message}: {this.props.count}</p>
         <button className="btn" onClick={this.doAction}>Count</button>
         <button className="btn" onClick={this.reset}>Reset</button>
+        <p className="total">{this.props.message}: {this.props.count}</p>
       </div>
     )
   }
