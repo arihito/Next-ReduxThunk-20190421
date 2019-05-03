@@ -3,10 +3,6 @@
     "static/development/dll/dll_7bc611f04f4f15742e11.js"
   ],
   "pages": {
-    "/": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -19,7 +15,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/fireadd": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/firedel": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

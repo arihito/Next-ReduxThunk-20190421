@@ -100,8 +100,7 @@ th {
   padding: 6px 10px;
   border: 1px solid #ccc;
   outline: none;
-  font-size: 18px;
-  width: 80px;
+  font-size: 16px;
 }
 .lists {
   border-bottom: 1px dotted #666;

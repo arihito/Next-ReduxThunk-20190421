@@ -54,7 +54,7 @@ class Calc extends Component {
     }
     return (
       <div>
-        <input type="text" className="inputtext" size="40" value={this.state.input} onChange={this.onChange} onKeyPress={this.onKeyPress} />
+        <input type="text" className="inputtext" size="8" placeholder="Number" value={this.state.input} onChange={this.onChange} onKeyPress={this.onKeyPress} />
         <button className="btn" onClick={this.doAction}>Enter</button>
         <button className="btn" onClick={this.reset}>Reset</button>
         <p>{this.props.message}</p>
