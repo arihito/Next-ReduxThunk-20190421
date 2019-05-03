@@ -1,4 +1,5 @@
 export default <style jsx>{`
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Noto+Sans+JP');
 html {
   font-family: sans-serif;
   font-size: 62.5%;
@@ -12,7 +13,7 @@ html * {
   padding: 0;
 }
 body {
-  font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: 'Heebo','Noto Sans JP', 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-size: 1.4rem;
   color: #333;
   line-height: 1;
@@ -21,6 +22,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Heebo';
   font-weight: normal;
   line-height: 1;
   font-family: $themeFont;
@@ -65,7 +67,7 @@ th {
 }
 /*************************/
 .wrapper {
-  width: 80vw;
+  width: 1000px;
   margin: auto;
 }
 .glHeader {
@@ -75,7 +77,7 @@ th {
 }
 .title {
   margin-right: 10px;
-  width: 200px;
+  width: 150px;
 }
 .subtitle {
   margin-right: 20px;
@@ -89,18 +91,23 @@ th {
   border-radius: 3px;
   background: linear-gradient(#fff, #eee);
   box-shadow: 0 0 3px #ccc;
+  position: relative;
+  top: -1px;
 }
+.btn:link,.btn:hover,.btn:visited,.btn:active,.btn:focus {outline: 0;}
 .btn:hover {
-  background: linear-gradient(#fafafa, #efefef);
+  background: linear-gradient(#f6f6f6, #efefef);
 }
 .total {
   font-size: 24px;
 }
 .inputtext {
-  padding: 6px 10px;
+  padding: 8px 10px 8px;
   border: 1px solid #ccc;
   outline: none;
   font-size: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc inset;
 }
 .lists {
   border-bottom: 1px dotted #666;
@@ -112,7 +119,7 @@ th {
 footer {
   color: #aaa;
   font-size: 10px;
-  text-align: center;
+  text-align: left;
   border-top: 1px dotted #aaa;
   margin: 50px 0;
   padding: 10px 0;
@@ -123,7 +130,7 @@ p {
   font-size: 16px;
 }
 .firetable {
-  width: 60%;
+  width: 100%;
 }
 .firetable tr {
   border-bottom: 1px dotted #999;

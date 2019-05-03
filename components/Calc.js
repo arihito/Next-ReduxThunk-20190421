@@ -49,7 +49,6 @@ class Calc extends Component {
     for (let i = 0; i < n; i++) {
       result.push(<tr className="lists" key={i}>
         <th>{this.props.data[i]}</th>
-        <td>{this.props.number[i]}</td>
       </tr>);
     }
     return (
@@ -59,9 +58,7 @@ class Calc extends Component {
         <button className="btn" onClick={this.reset}>Reset</button>
         <p>{this.props.message}</p>
         <p className="total">TOTAL: {this.props.result}</p>
-        <table>
-          <tbody>{result}</tbody>
-        </table>
+        <table className="firetable">{result}</table>
       </div>
     )
   }
