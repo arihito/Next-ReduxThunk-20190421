@@ -11,6 +11,7 @@ class Header extends Component {
       <Link href="/calc"><button className="btn">Calcurator</button></Link>
       <Link href="/count"><button className="btn">Counter</button></Link>
       <Link href="/fire"><button className="btn">Memo</button></Link>
+      <Link href="/address"><button className="btn">Address</button></Link>
     </header>);
   }
 }

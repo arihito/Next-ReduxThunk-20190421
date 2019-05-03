@@ -10,7 +10,7 @@ class Layout extends Component {
       {style}
       <Header title={this.props.title} subtitle={this.props.subtitle} />
       {this.props.children}
-      <Footer footer="copyright ARIHITO-MATSUDA" />
+      <Footer footer="&copy; Copyright 2019 ARIHITO MATSUDA AllrightReserved." />
     </div>);
   }
 }

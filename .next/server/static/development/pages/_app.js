@@ -1262,12 +1262,17 @@ function (_App2) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initStore", function() { return initStore; });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase */ "firebase");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "redux");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase */ "firebase");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _initial;
+
 
 
 
@@ -1282,23 +1287,24 @@ var config = {
 var fireapp;
 
 try {
-  firebase__WEBPACK_IMPORTED_MODULE_2___default.a.initializeApp(config);
+  firebase__WEBPACK_IMPORTED_MODULE_3___default.a.initializeApp(config);
 } catch (error) {
   console.error(error.message);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (fireapp); // ステート初期値
 
-var initial = {
-  message: 'START',
-  count: 0,
+var initial = (_initial = {
+  login: false,
+  username: '(click here!)',
+  email: '',
   data: [],
-  number: [],
-  result: 0 // 計算機レデューサー
+  items: [],
+  message: 'START',
+  count: 0
+}, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_initial, "data", []), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_initial, "number", []), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_initial, "result", 0), _initial); // レデューサー
 
-};
-
-function calcReducer() {
+function allReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initial;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
@@ -1330,7 +1336,9 @@ function calcReducer() {
         message: 'DECREMENT',
         count: state.count - 1
       };
-    // リセット
+
+    case 'UPDATE_USER':
+      return action.value;
 
     case 'RESET':
       return {
@@ -1340,7 +1348,6 @@ function calcReducer() {
         number: [],
         result: 0
       };
-    // デフォルト
 
     default:
       return state;
@@ -1350,34 +1357,8 @@ function calcReducer() {
 
 function initStore() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initial;
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(calcReducer, state, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default.a));
-} // カウンターレデューサー
-// function counterReducer(state = initial, action) {
-//   switch (action.type) {
-//     case 'INCREMENT':
-//       return {
-//         message: 'INCREMENT',
-//         count: state.count + 1
-//       };
-//     case 'DECREMENT':
-//       return {
-//         message: 'DECREMENT',
-//         count: state.count - 1
-//       };
-//     case 'RESET':
-//       return {
-//         message: 'RESET',
-//         count: initial.count
-//       };
-//     default:
-//       return state;
-//   }
-// }
-// intialStore関数(redux-store.jsで必要)
-// export function initStore(state = initial) {
-//   return createStore(counterReducer, state,
-//   applyMiddleware(thunkMiddleware))
-// }
+  return Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(allReducer, state, Object(redux__WEBPACK_IMPORTED_MODULE_1__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a));
+}
 
 /***/ }),
 

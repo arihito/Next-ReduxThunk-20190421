@@ -34,11 +34,11 @@
     <h1>React</h1>
     <div id="root">wait...</div>
     <script>
-    let dom = document.querySelector('#root');
+    let dom = document.querySelector('#root')
     let element = React.createElement(
       'p', {}, 'Hello React!'
-    );
-    ReactDOM.render(element, dom);
+    )
+    ReactDOM.render(element, dom)
     </script>
 </body>
 </html>
@@ -56,28 +56,28 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <style>
     #root {
-        cursor: pointer;
-        font-size:20pt;
-        background-color:lightblue;
-        padding:1px 20px;
+        cursor: pointer
+        font-size:20pt
+        background-color:lightblue
+        padding:1px 20px
     }
     </style>
 </head>
 <body>
     <h1>React</h1>
-    <div id="root" onclick="doCount();">wait...</div>
+    <div id="root" onclick="doCount()">wait...</div>
     <script>
-    let counter = 0;
-    let dom = document.querySelector('#root');
-    doCount();
+    let counter = 0
+    let dom = document.querySelector('#root')
+    doCount()
 
 
     function doCount(){
-        counter++;
+        counter++
         let element = React.createElement(
             'p', {}, "count: " + counter
-        );
-        ReactDOM.render(element, dom);
+        )
+        ReactDOM.render(element, dom)
     }
     </script>
 </body>
@@ -99,11 +99,11 @@
     <h1>React</h1>
     <div id="root">wait...</div>
     <script>
-    let dom = document.querySelector('#root');
+    let dom = document.querySelector('#root')
     let element = React.createElement(
       'p', {}, 'Hello React!'
-    );
-    ReactDOM.render(element, dom);
+    )
+    ReactDOM.render(element, dom)
     </script>
 </body>
 </html>
@@ -131,17 +131,17 @@
 
 
 ▼リスト2-3
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 let element = React.createElement(
   'p', {}, 'Hello React Application!'
-);
-ReactDOM.render(element, dom);
+)
+ReactDOM.render(element, dom)
 
 
 
 
 ▼リスト2-4
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 let element = React.createElement(
     'div', {}, [
         React.createElement(
@@ -163,10 +163,10 @@ let element = React.createElement(
                 ),
             ]
         ),
-    ]);
+    ])
 
 
-ReactDOM.render(element, dom);
+ReactDOM.render(element, dom)
 
 
 
@@ -184,7 +184,7 @@ ReactDOM.render(element, dom);
 
 
     <script type="text/babel">
-    let dom = document.querySelector('#root');
+    let dom = document.querySelector('#root')
 
 
     let el = (
@@ -192,10 +192,10 @@ ReactDOM.render(element, dom);
             <h2>JSX sample</h2>
             <p>This is sample message.</p>
         </div>
-    );
+    )
 
 
-    ReactDOM.render(el, dom);
+    ReactDOM.render(el, dom)
     </script>
 </body>
 
@@ -204,11 +204,11 @@ ReactDOM.render(element, dom);
 
 ▼リスト2-7
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
-let title = "新タイトル";
-let message = "新しいメッセージです。";
+let title = "新タイトル"
+let message = "新しいメッセージです。"
 
 
 let el = (
@@ -216,10 +216,10 @@ let el = (
         <h2>{title}</h2>
         <p>{message}</p>
     </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -227,11 +227,11 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-8
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
-let message = "新しいメッセージです。";
-let link = "http://google.com";
+let message = "新しいメッセージです。"
+let link = "http://google.com"
 
 
 let el = (
@@ -239,10 +239,10 @@ let el = (
         <p>{message}</p>
         <p><a href={link}>this is link!</a></p>
     </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -250,10 +250,10 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-9
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
-let message = "新しいメッセージです。";
+let message = "新しいメッセージです。"
 
 
 const msg_s = {
@@ -267,10 +267,10 @@ let el = (
     <div>
         <p style={msg_s}>{message}</p>
     </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -278,10 +278,10 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-10
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
-let message = "メッセージを表示します。";
+let message = "メッセージを表示します。"
 
 
 const msg = {
@@ -298,8 +298,8 @@ let printMsg = function(msg, size, color){
         fontWeight:'700',
         color: color,
         border: "1px solid " + color
-    };
-    return <p style={style}>{msg}</p>;
+    }
+    return <p style={style}>{msg}</p>
 }
 
 
@@ -309,8 +309,8 @@ let el = (
         {printMsg('次のメッセージです.', 20, '#aaa')}
         {printMsg('最後のメッセージでした.', 14, '#333')}
     </div>
-);
-ReactDOM.render(el, dom);
+)
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -318,10 +318,10 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-11
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
-let message = "メッセージを表示します。";
+let message = "メッセージを表示します。"
 
 
 const msg = {
@@ -332,7 +332,7 @@ const msg = {
 }
 
 
-let flg = true; // ★
+let flg = true // ★
 
 
 let el = (
@@ -341,8 +341,8 @@ let el = (
         <p style={msg}>{message}</p>
     }
     </div>
-);
-ReactDOM.render(el, dom);
+)
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -350,11 +350,11 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-12
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
-let message_true = "メッセージを表示します。";
-let message_false = "メッセージはありません……";
+let message_true = "メッセージを表示します。"
+let message_false = "メッセージはありません……"
 
 
 const msg_true = {
@@ -371,7 +371,7 @@ const msg_false = {
 }
 
 
-let flg = true; // ★
+let flg = true // ★
 
 
 let el = (
@@ -382,10 +382,10 @@ let el = (
         <p style={msg_false}>{message_false}</p>
     }
     </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -393,7 +393,7 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-13
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const list = {
@@ -406,7 +406,7 @@ let data = [
     <li>One</li>,
     <li>Two</li>,
     <li>Three</li>
-];
+]
 
 
 let el = (
@@ -415,10 +415,10 @@ let el = (
         {data}
         </ul>
     </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -426,7 +426,7 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-14
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const table = {
@@ -449,7 +449,7 @@ let data = [
     {name:'Taro', mail:'taro@yamada', age:45},
     {name:'Hanako', mail:'hanako@flower', age:37},
     {name:'Sachiko', mail:'sachiko@happy', age:29}
-];
+]
 
 
 let el = (
@@ -469,10 +469,10 @@ let el = (
         ))}
         </table>
     </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -480,7 +480,7 @@ ReactDOM.render(el, dom);
 
 ▼リスト2-15
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const dfn = {
@@ -503,7 +503,7 @@ let data = {
     url:'http://google.com',
     title:'Google',
     caption:'※Googleの検索サイトです。'
-};
+}
 
 
 let el = (
@@ -522,37 +522,37 @@ let el = (
     </dl>
     )()}
 </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
 
 ▼リスト2-16
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const p = {
     fontSize: "20pt",
     padding: "10px",
-};
+}
 
 
-var counter = 0;
+var counter = 0
 
 
 setInterval(() => {
-    counter++;
+    counter++
     let el = (
         <div>
             <p style={p}>count: {counter}</p>
         </div>
-    );
-    ReactDOM.render(el, dom);
-}, 1000);
+    )
+    ReactDOM.render(el, dom)
+}, 1000)
 
 
 </script>
@@ -562,29 +562,29 @@ setInterval(() => {
 
 ▼リスト2-17
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const p = {
     fontSize: "20pt",
     padding: "10px",
-};
+}
 
 
-var counter = 0;
+var counter = 0
 
 
 let el = (
     <div>
         <p style={p}>count: {counter}</p>
     </div>
-);
+)
 
 
 setInterval(() => {
-    counter++;
-    ReactDOM.render(el, dom);
-}, 1000);
+    counter++
+    ReactDOM.render(el, dom)
+}, 1000)
 </script>
 
 
@@ -592,7 +592,7 @@ setInterval(() => {
 
 ▼リスト2-18
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const p = {
@@ -601,26 +601,26 @@ const p = {
     backgroundColor:"blue",
     color:"white",
     cursor:"pointer"
-};
+}
 
 
-var counter = 0;
+var counter = 0
 
 
 let doAction = (event)=>{
-    counter++;
+    counter++
     let el = (
         <div>
             <p onClick={doAction} style={p}>
                 count: {counter}
             </p>
         </div>
-    );
-    ReactDOM.render(el, dom);
-};
+    )
+    ReactDOM.render(el, dom)
+}
 
 
-doAction();
+doAction()
 </script>
 
 
@@ -628,27 +628,27 @@ doAction();
 
 ▼リスト2-19
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const p = {
     fontSize: "20pt",
     padding: "10px",
-};
+}
 const input = {
     fontSize: "16pt",
     padding: "5px 10px",
 }
 
 
-let message = 'お名前をどうぞ：';
-let in_val = '';
+let message = 'お名前をどうぞ：'
+let in_val = ''
 
 
 let doChange = (event)=>{
-    in_val = event.target.value;
-    message = 'こんにちは, ' + in_val + 'さん!!';
-};
+    in_val = event.target.value
+    message = 'こんにちは, ' + in_val + 'さん!!'
+}
 
 
 let doAction = (event)=>{
@@ -663,12 +663,12 @@ let doAction = (event)=>{
             </button>
         </div>
     </div>
-    );
-    ReactDOM.render(el, dom);
-};
+    )
+    ReactDOM.render(el, dom)
+}
 
 
-doAction();
+doAction()
 </script>
 
 
@@ -690,7 +690,7 @@ doAction();
     <h1>React</h1>
     <div id="root">wait...</div>
     <script type="text/babel">
-    let dom = document.querySelector('#root');
+    let dom = document.querySelector('#root')
 
 
     const msg = {
@@ -699,12 +699,12 @@ doAction();
         padding: "10px",
         color:"white",
         backgroundColor:"darkblue"
-    };
+    }
 
 
     // これが関数コンポーネント
     function Welcome(props) {
-        return <p style={msg}>Hello React!!</p>;
+        return <p style={msg}>Hello React!!</p>
     }
 
 
@@ -713,8 +713,8 @@ doAction();
     <div>
         <Welcome />
     </div>
-    );
-    ReactDOM.render(el, dom);
+    )
+    ReactDOM.render(el, dom)
     </script>
 </body>
 
@@ -726,14 +726,14 @@ doAction();
 
 ▼リスト3-2
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const msg1 = {
     fontSize: "20pt",
     padding: "10px",
     border: "double 5px magenta"
-};
+}
 
 
 const msg2 = {
@@ -741,11 +741,11 @@ const msg2 = {
     fontWeight: "bold",
     padding: "10px",
     backgroundColor:"cyan"
-};
+}
 
 
 function Welcome(props) {
-    return <p style={props.style}>Hello, {props.name}!!</p>;
+    return <p style={props.style}>Hello, {props.name}!!</p>
 }
 
 
@@ -754,8 +754,8 @@ let el = (
     <Welcome name="Taro" style={msg1} />
     <Welcome name="Hanako" style={msg2} />
 </div>
-);
-ReactDOM.render(el, dom);
+)
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -763,7 +763,7 @@ ReactDOM.render(el, dom);
 
 ▼リスト3-3
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const msg = {
@@ -772,16 +772,16 @@ const msg = {
     padding: "10px",
     color:"white",
     backgroundColor:"darkblue"
-};
+}
 
 
 function Calc(props) {
-    let total = 0;
-    for(let i = 1;i <= props.number;i++){
-        total += i;
+    let total = 0
+    for(let i = 1i <= props.numberi++){
+        total += i
     }
     return <p style={msg}>１から{props.number}までの
-        合計は、「{total}」です。</p>;
+        合計は、「{total}」です。</p>
 }
 
 
@@ -791,8 +791,8 @@ let el = (
     <Calc number="200" />
     <Calc number="300" />
 </div>
-);
-ReactDOM.render(el, dom);
+)
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -800,7 +800,7 @@ ReactDOM.render(el, dom);
 
 ▼リスト3-4
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 const msg = {
@@ -808,19 +808,19 @@ const msg = {
     fontWeight: "bold",
     padding: "10px",
     border: "solid 5px yellow"
-};
+}
 
 
 class Hello extends React.Component {
 
 
     constructor(props){
-        super(props);
+        super(props)
     }
 
 
     render(){
-        return <p style={msg}>Hello!!</p>;
+        return <p style={msg}>Hello!!</p>
     }
 }
 
@@ -829,10 +829,10 @@ let el = (
 <div>
     <Hello />
 </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -840,25 +840,25 @@ ReactDOM.render(el, dom);
 
 ▼リスト3-5
 <script type="text/babel">
-let dom = document.querySelector('#root');
+let dom = document.querySelector('#root')
 
 
 class Rect extends React.Component {
-    x = 0;
-    y = 0;
-    width = 0;
-    height = 0;
-    color = "white";
-    style = {};
+    x = 0
+    y = 0
+    width = 0
+    height = 0
+    color = "white"
+    style = {}
 
 
     constructor(props){
-        super(props);
-        this.x = props.x;
-        this.y = props.y;
-        this.width = props.w;
-        this.height = props.h;
-        this.color = props.c;
+        super(props)
+        this.x = props.x
+        this.y = props.y
+        this.width = props.w
+        this.height = props.h
+        this.color = props.c
         this.style = {
             backgroundColor:this.color,
             position:"absolute",
@@ -871,7 +871,7 @@ class Rect extends React.Component {
 
 
     render(){
-        return <div style={this.style}></div>;
+        return <div style={this.style}></div>
     }
 }
 
@@ -881,10 +881,10 @@ let el = (
     <Rect x="100" y="100" w="100" h="100" c="cyan" />
     <Rect x="150" y="150" w="100" h="100" c="magenta" />
 </div>
-);
+)
 
 
-ReactDOM.render(el, dom);
+ReactDOM.render(el, dom)
 </script>
 
 
@@ -913,25 +913,25 @@ ReactDOM.render(el, dom);
 
 
 ▼リスト3-7
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 
 
-serviceWorker.unregister();
+serviceWorker.unregister()
 
 
 
 
 ▼リスト3-8
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 
 
 class App extends Component {
@@ -953,19 +953,19 @@ class App extends Component {
           </a>
         </header>
       </div>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-9
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 
 class App extends Component {
@@ -974,82 +974,82 @@ class App extends Component {
       <h1>React</h1>
       <p>This is sample component.</p>
       <p>これはサンプルのコンポーネントです。</p>
-  </div>;
+  </div>
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-10
 body {
-  margin:10px;
+  margin:10px
 }
 h1 {
-  font-size:72pt;
-  font-weight:bold;
-  text-align:right;
-  letter-spacing:-8px;
-  color:#f0f0f0;
-  margin:-40px 0px;
+  font-size:72pt
+  font-weight:bold
+  text-align:right
+  letter-spacing:-8px
+  color:#f0f0f0
+  margin:-40px 0px
 }
 p {
-    margin:0px;
-    color:#666;
-    font-size:16pt;
+    margin:0px
+    color:#666
+    font-size:16pt
 }
 
 
 
 
 ▼リスト3-11
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 
 class App extends Component {
 
 
   constructor(props){
-    super();
-    this.title = props.title;
-    this.message = props.message;
+    super()
+    this.title = props.title
+    this.message = props.message
   }
   render(){
     return <div>
       <h1>{this.title}</h1>
       <p>{this.message}</p>
-  </div>;
+  </div>
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-12
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
 
 
 ReactDOM.render(
     <App title="App" message="This is App Component!" />,
     document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト3-13
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 
 class App extends Component {
@@ -1059,27 +1059,27 @@ class App extends Component {
       <Rect x="50" y="50" w="150" h="150" c="cyan" />
       <Rect x="150" y="100" w="150" h="150" c="magenta" />
       <Rect x="100" y="150" w="150" h="150" c="black" />
-    </div>;
+    </div>
   }
 }
 
 
 class Rect extends Component {
-  x = 0;
-  y = 0;
-  width = 0;
-  height = 0;
-  color = "white";
-  style = {};
+  x = 0
+  y = 0
+  width = 0
+  height = 0
+  color = "white"
+  style = {}
 
 
   constructor(props){
-      super(props);
-      this.x = props.x;
-      this.y = props.y;
-      this.width = props.w;
-      this.height = props.h;
-      this.color = props.c;
+      super(props)
+      this.x = props.x
+      this.y = props.y
+      this.width = props.w
+      this.height = props.h
+      this.color = props.c
       this.style = {
           backgroundColor:this.color,
           position:"absolute",
@@ -1092,12 +1092,12 @@ class Rect extends Component {
 
 
   render(){
-      return <div style={this.style}></div>;
+      return <div style={this.style}></div>
   }
 }
 
 
-export default App;
+export default App
 
 
 
@@ -1105,32 +1105,32 @@ export default App;
 ▼リスト3-14
 ReactDOM.render(
     <App />, document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト3-15
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
 class Rect extends Component {
-  x = 0;
-  y = 0;
-  width = 0;
-  height = 0;
-  color = "white";
-  style = {};
+  x = 0
+  y = 0
+  width = 0
+  height = 0
+  color = "white"
+  style = {}
 
 
   constructor(props){
-    super(props);
-    this.x = props.x;
-    this.y = props.y;
-    this.width = props.w;
-    this.height = props.h;
-    this.color = props.c;
-    this.radius = props.r;
+    super(props)
+    this.x = props.x
+    this.y = props.y
+    this.width = props.w
+    this.height = props.h
+    this.color = props.c
+    this.radius = props.r
     this.style = {
         backgroundColor:this.color,
         position:"absolute",
@@ -1144,20 +1144,20 @@ class Rect extends Component {
 
 
   render(){
-      return <div style={this.style}></div>;
+      return <div style={this.style}></div>
   }
 }
 
 
-export default Rect;
+export default Rect
 
 
 
 
 ▼リスト3-16
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
@@ -1167,20 +1167,20 @@ class App extends Component {
       <Rect x="50" y="50" w="150" h="150" c="#6ff9" r="50" />
       <Rect x="150" y="100" w="150" h="150" c="#f6f9" r="75" />
       <Rect x="100" y="150" w="150" h="150" c="#6669" r="25" />
-    </div>;
+    </div>
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-17
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
@@ -1196,10 +1196,10 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       msg:'Hello Component.',
-    };
+    }
   }
 
 
@@ -1208,12 +1208,12 @@ class App extends Component {
       <h1>React</h1>
       <p style={this.msgStyle}>{this.state.msg}</p>
       <p style={this.msgStyle}>{this.props.msg}</p>
-    </div>;
+    </div>
   }
 }
 
 
-export default App;
+export default App
 
 
 
@@ -1221,15 +1221,15 @@ export default App;
 ▼リスト3-18
 ReactDOM.render(
     <App msg="Hello App." />, document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト3-19
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
@@ -1249,15 +1249,15 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       msg:'Hello',
-    };
+    }
     let timer = setInterval(()=>{
       this.setState((state)=>({
         msg: state.msg + "!"
-      }));
-    }, 10000);
+      }))
+    }, 10000)
   }
 
 
@@ -1266,22 +1266,22 @@ class App extends Component {
       <h1>React</h1>
       <p style={this.msgStyle}>{this.state.msg}</p>
       <p style={this.msgStyle}>{this.props.msg}</p>
-    </div>;
+    </div>
   }
 
 
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-20
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
@@ -1301,12 +1301,12 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       counter:0,
       msg:'count start!',
-    };
-    this.doAction = this.doAction.bind(this);
+    }
+    this.doAction = this.doAction.bind(this)
   }
 
 
@@ -1314,7 +1314,7 @@ class App extends Component {
     this.setState((state)=> ({
       counter: state.counter + 1,
       msg: 'count: ' + state.counter
-    }));
+    }))
   }
 
   render(){
@@ -1322,14 +1322,14 @@ class App extends Component {
       <h1>React</h1>
       <p style={this.msgStyle}>{this.state.msg}</p>
       <button style={this.btnStyle} onClick={this.doAction}>Click</button>
-    </div>;
+    </div>
   }
 
 
 }
 
 
-export default App;
+export default App
 
 
 
@@ -1337,15 +1337,15 @@ export default App;
 ▼リスト3-21
 ReactDOM.render(
     <App />, document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト3-22
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
@@ -1373,13 +1373,13 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       counter:0,
       msg:'count start!',
       flg:true,
-    };
-    this.doAction = this.doAction.bind(this);
+    }
+    this.doAction = this.doAction.bind(this)
   }
 
 
@@ -1388,7 +1388,7 @@ class App extends Component {
       counter: state.counter + 1,
       msg: state.counter,
       flg: !state.flg
-    }));
+    }))
   }
 
   render(){
@@ -1400,26 +1400,26 @@ class App extends Component {
         <p style={this.msgStyle2}>{this.state.msg}です。</p>
       }
       <button style={this.btnStyle} onClick={this.doAction}>Click</button>
-    </div>;
+    </div>
   }
 
 
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-23
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
-  data = [];
+  data = []
 
 
   msgStyle = {
@@ -1436,21 +1436,21 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       list:this.data
-    };
-    this.doAction = this.doAction.bind(this);
+    }
+    this.doAction = this.doAction.bind(this)
   }
 
 
   doAction(e){
-    let x = e.pageX;
-    let y = e.pageY;
-    this.data.push({x:x, y:y});
+    let x = e.pageX
+    let y = e.pageY
+    this.data.push({x:x, y:y})
     this.setState({
       list:this.data
-    });
+    })
   }
 
 
@@ -1462,8 +1462,8 @@ class App extends Component {
         width:"50px",
         height:"50px",
         backgroundColor:"#66f3",
-      };
-      return <div style={s}></div>;
+      }
+      return <div style={s}></div>
   }
 
   render(){
@@ -1473,22 +1473,22 @@ class App extends Component {
       <div style={this.area} onClick={this.doAction}>
         {this.data.map((value)=>this.draw(value))}
       </div>
-    </div>;
+    </div>
   }
 
 
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-24
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
@@ -1496,7 +1496,7 @@ class App extends Component {
     "This is list sample.",
     "これはリストのサンプルです。",
     "配列をリストに変換します。"
-  ];
+  ]
 
 
   msgStyle = {
@@ -1508,10 +1508,10 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       list:this.data
-    };
+    }
   }
 
 
@@ -1520,24 +1520,24 @@ class App extends Component {
       <h1>React</h1>
       <h2 style={this.msgStyle}>show list.</h2>
       <List title="サンプル・リスト" data={this.data} />
-    </div>;
+    </div>
   }
 }
 
 
 class List extends Component {
-  number = 1;
+  number = 1
 
 
   title = {
     fontSize:"20pt",
     fontWeight:"bold",
     color:"blue",
-  };
+  }
 
 
   render(){
-    let data = this.props.data;
+    let data = this.props.data
      return (
       <div>
        <p style={this.title}>{this.props.title}</p>
@@ -1548,7 +1548,7 @@ class List extends Component {
           )}
         </ul>
       </div>
-    );
+    )
   }
 }
 
@@ -1573,24 +1573,24 @@ class Item extends Component {
         <span style={this.num}>[{this.props.number}] </span>
           {this.props.value}
       </li>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-25
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
-  input = '';
+  input = ''
 
 
   msgStyle = {
@@ -1602,25 +1602,25 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       message:'type your name:'
-    };
-    this.doChange = this.doChange.bind(this);
-    this.doSubmit = this.doSubmit.bind(this);
+    }
+    this.doChange = this.doChange.bind(this)
+    this.doSubmit = this.doSubmit.bind(this)
   }
 
 
   doChange(event) {
-    this.input = event.target.value;
+    this.input = event.target.value
   }
 
 
   doSubmit(event) {
     this.setState({
       message: 'Hello, ' + this.input + '!!'
-    });
-    event.preventDefault();
+    })
+    event.preventDefault()
   }
   render(){
     return <div>
@@ -1630,7 +1630,7 @@ class App extends Component {
         マルでテキストを分割し、リストにして表示します。
         改行は必要ありません。
       </Message>
-    </div>;
+    </div>
   }
 
 
@@ -1647,17 +1647,17 @@ class Message extends Component {
 
 
   render(){
-    let content = this.props.children;
-    let arr = content.split('。');
-    let arr2 = [];
-    for(let i = 0;i < arr.length;i++){
+    let content = this.props.children
+    let arr = content.split('。')
+    let arr2 = []
+    for(let i = 0i < arr.lengthi++){
       if (arr[i].trim() != ''){
-        arr2.push(arr[i]);
+        arr2.push(arr[i])
       }
     }
     let list = arr2.map((value,key)=>(
       <li style={this.li} key={key}>{value}.</li>)
-    );
+    )
     return <div>
       <h2>{this.props.title}</h2>
       <ol>{list}</ol>
@@ -1666,19 +1666,19 @@ class Message extends Component {
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-26
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
-  input = '';
+  input = ''
 
 
   msgStyle = {
@@ -1694,25 +1694,25 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       message:'type your name:'
-    };
-    this.doChange = this.doChange.bind(this);
-    this.doSubmit = this.doSubmit.bind(this);
+    }
+    this.doChange = this.doChange.bind(this)
+    this.doSubmit = this.doSubmit.bind(this)
   }
 
 
   doChange(event) {
-    this.input = event.target.value;
+    this.input = event.target.value
   }
 
 
   doSubmit(event) {
     this.setState({
       message: 'Hello, ' + this.input + '!!'
-    });
-    event.preventDefault();
+    })
+    event.preventDefault()
   }
   render(){
     return <div>
@@ -1725,14 +1725,14 @@ class App extends Component {
         </label>
         <input type="submit" style={this.inputStyle} value="Click" />
       </form>
-    </div>;
+    </div>
   }
 
 
 }
 
 
-export default App;
+export default App
 
 
 
@@ -1747,25 +1747,25 @@ export default App;
 
 ▼リスト3-28
 input:invalid {
-  border: 2px dashed red;
+  border: 2px dashed red
 }
 
 
 input:valid {
-  border: 1px solid blue;
+  border: 1px solid blue
 }
 
 
 
 
 ▼リスト3-29
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 class App extends Component {
-  input = '';
+  input = ''
 
 
   msgStyle = {
@@ -1777,17 +1777,17 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       message:'type your name:'
-    };
-    this.doCheck = this.doCheck.bind(this);
+    }
+    this.doCheck = this.doCheck.bind(this)
   }
 
 
   doCheck(event) {
     alert(event.target.value +
-      "は長すぎます。(最大10文字)");
+      "は長すぎます。(最大10文字)")
   }
 
 
@@ -1796,7 +1796,7 @@ class App extends Component {
       <h1>React</h1>
       <h2>{this.state.message}</h2>
       <Message maxlength="10" onCheck={this.doCheck} />
-    </div>;
+    </div>
   }
 
 
@@ -1811,16 +1811,16 @@ class Message extends Component {
 
 
   constructor(props){
-    super(props);
-    this.doChange = this.doChange.bind(this);
+    super(props)
+    this.doChange = this.doChange.bind(this)
   }
 
 
   doChange(e){
     if (e.target.value.length > this.props.maxlength){
-      this.props.onCheck(e);
+      this.props.onCheck(e)
       e.target.value =
-        e.target.value.substr(0,this.props.maxlength);
+        e.target.value.substr(0,this.props.maxlength)
     }
   }
 
@@ -1832,22 +1832,22 @@ class Message extends Component {
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-30
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 let data = {title:'Title',
-  message:'this is sample message.'};
+  message:'this is sample message.'}
 
 
-const SampleContext = React.createContext(data);
+const SampleContext = React.createContext(data)
 
 
 class App extends Component {
@@ -1860,13 +1860,13 @@ class App extends Component {
         <Title />
         <Message />
       </div>
-    );
+    )
   }
 }
 
 
 class Title extends Component {
-  static contextType = SampleContext;
+  static contextType = SampleContext
 
 
   render(){
@@ -1874,13 +1874,13 @@ class Title extends Component {
       <div>
         <h2>{this.context.title}</h2>
       </div>
-    );
+    )
   }
 }
 
 
 class Message extends Component {
-  static contextType = SampleContext;
+  static contextType = SampleContext
 
 
   render(){
@@ -1888,32 +1888,32 @@ class Message extends Component {
       <div>
         <p>{this.context.message}</p>
       </div>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-31
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 let data = {title:'Title',
-  message:'this is sample message.'};
+  message:'this is sample message.'}
 
 
-const SampleContext = React.createContext(data);
+const SampleContext = React.createContext(data)
 
 
 class App extends Component {
   newdata = {title:'新しいタイトル',
-    message:'これは新しいメッセージです。'};
+    message:'これは新しいメッセージです。'}
 
 
   render() {
@@ -1929,13 +1929,13 @@ class App extends Component {
         <Title />
         <Message />
       </div>
-    );
+    )
   }
 }
 
 
 class Title extends Component {
-  static contextType = SampleContext;
+  static contextType = SampleContext
 
 
   render(){
@@ -1943,13 +1943,13 @@ class Title extends Component {
       <div>
         <h2>{this.context.title}</h2>
       </div>
-    );
+    )
   }
 }
 
 
 class Message extends Component {
-  static contextType = SampleContext;
+  static contextType = SampleContext
 
 
   render(){
@@ -1957,20 +1957,20 @@ class Message extends Component {
       <div>
         <p>{this.context.message}</p>
       </div>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-32
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 let theme = {
@@ -1984,14 +1984,14 @@ let theme = {
     color:"#eef",
     padding:"10px",
   }
-};
+}
 
 
-const ThemeContext = React.createContext(theme.light); //★
+const ThemeContext = React.createContext(theme.light) //★
 
 
 class App extends Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext
 
 
   render() {
@@ -2001,44 +2001,44 @@ class App extends Component {
         <Message value="This is Content sample." />
         <Message value="※これはテーマのサンプルです。" />
       </div>
-    );
+    )
   }
 }
 
 
 class Title extends Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext
 
 
   render(){
     return (
       <h2 style={this.context}>{this.props.value}</h2>
-    );
+    )
   }
 }
 
 
 class Message extends Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext
 
 
   render(){
     return (
         <p  style={this.context}>{this.props.value}</p>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト3-33
-import React, { Component } from 'react';
-import Rect from './Rect';
-import './App.css';
+import React, { Component } from 'react'
+import Rect from './Rect'
+import './App.css'
 
 
 let theme = {
@@ -2052,14 +2052,14 @@ let theme = {
     color:"#eef",
     padding:"10px",
   }
-};
+}
 
 
-const ThemeContext = React.createContext(theme.light); //★
+const ThemeContext = React.createContext(theme.light) //★
 
 
 class App extends Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext
 
 
   render() {
@@ -2069,47 +2069,47 @@ class App extends Component {
         <Message value="This is Content sample." />
         <Message value="※これはテーマのサンプルです。" />
       </div>
-    );
+    )
   }
 }
 
 
 class Title extends Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext
 
 
   render(){
     return (
       <h2 style={this.context}>{this.props.value}</h2>
-    );
+    )
   }
 }
 
 
 class Message extends Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext
 
 
   render(){
     return (
         <p  style={this.context}>{this.props.value}</p>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト4-1
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore, combineReducers } from 'redux'
+import { Provider } from 'react-redux'
+import './index.css'
+import App from './App'
 
 
 // ステートの値
@@ -2126,20 +2126,20 @@ function counter(state = state_value, action) {
         return {
             counter:state.counter + 1,
             message:"INCREMENT"
-        };
+        }
         case 'DECREMENT':
         return {
             counter:state.counter - 1,
             message:"DECREMENT"
-        };
+        }
         default:
-        return state;
+        return state
     }
 }
 
 
 // ストアを作成
-let store = createStore(counter);
+let store = createStore(counter)
 
 
 // 表示をレンダリング
@@ -2148,20 +2148,20 @@ ReactDOM.render(
         <App />
     </Provider>,
     document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト4-2
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import './App.css'
 
 
 // ステートのマッピング
 function mappingState(state) {
-  return state;
+  return state
 }
 
 
@@ -2170,7 +2170,7 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
   }
 
   render() {
@@ -2180,11 +2180,11 @@ class App extends Component {
         <Message />
         <Button />
       </div>
-    );
+    )
   }
 }
 // ストアのコネクト
-App = connect()(App);
+App = connect()(App)
 
 
 // メッセージ表示のコンポーネント
@@ -2199,11 +2199,11 @@ class Message extends Component {
       <p style={this.style}>
         {this.props.message}: {this.props.counter}
       </p>
-    );
+    )
   }
 }
 // ストアのコネクト
-Message = connect(mappingState)(Message);
+Message = connect(mappingState)(Message)
 
 
 //
@@ -2214,16 +2214,16 @@ class Button extends Component {
   }
 
   constructor(props){
-    super(props);
-    this.doAction = this.doAction.bind(this);
+    super(props)
+    this.doAction = this.doAction.bind(this)
   }
 
   // ボタンクリックでディスパッチを実行
   doAction(e){
     if (e.shiftKey){
-      this.props.dispatch({ type:'DECREMENT' });
+      this.props.dispatch({ type:'DECREMENT' })
     } else {
-      this.props.dispatch({ type:'INCREMENT' });
+      this.props.dispatch({ type:'INCREMENT' })
     }
   }
 
@@ -2234,24 +2234,24 @@ class Button extends Component {
           onClick={this.doAction}>
         click
       </button>
-    );
+    )
   }
 }
 // ストアのコネクト
-Button = connect()(Button);
+Button = connect()(Button)
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト4-3――index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import './index.css'
+import App from './App'
 import MemoStore from './memo/Store'
 
 
@@ -2261,19 +2261,19 @@ ReactDOM.render(
         <App />
     </Provider>,
     document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト4-4――App.js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './App.css';
-import Memo from './memo/Memo';
-import AddForm from './memo/AddForm';
-import FindForm from './memo/FindForm';
-import DelForm from './memo/DelForm';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import './App.css'
+import Memo from './memo/Memo'
+import AddForm from './memo/AddForm'
+import FindForm from './memo/FindForm'
+import DelForm from './memo/DelForm'
 
 
 // Appコンポーネント
@@ -2284,7 +2284,7 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
   }
 
   render() {
@@ -2299,40 +2299,40 @@ class App extends Component {
         </tr></tbody></table>
         <Memo />
       </div>
-    );
+    )
   }
 }
 
 
-export default connect()(App);
+export default connect()(App)
 
 
 
 
 ▼リスト4-5
-import { createStore } from 'redux';
+import { createStore } from 'redux'
 
 const initData = {
   data:[{message:'sample data', created:new Date()}],
   message:'please type message:',
   mode:'default',
   fdata:[]
-};
+}
 
 // レデューサー
 export function memoReducer(state = initData, action) {
   switch (action.type) {
     case 'ADD':
-      return addReduce(state, action);
+      return addReduce(state, action)
 
     case 'DELETE':
-      return deleteReduce(state, action);
+      return deleteReduce(state, action)
 
     case 'FIND':
-      return findReduce(state, action);
+      return findReduce(state, action)
 
     default:
-      return state;
+      return state
   }
 }
 
@@ -2343,38 +2343,38 @@ function addReduce(state, action){
   let data = {
     message:action.message,
     created:new Date()
-  };
-  let newdata = state.data.slice();
-  newdata.unshift(data);
+  }
+  let newdata = state.data.slice()
+  newdata.unshift(data)
   return {
     data:newdata,
     message:'Added!',
     mode:'default',
     fdata:[]
-  };
+  }
 }
 
 // メモ検索のレデュース処理
 function findReduce(state, action){
-  let f = action.find;
-  let fdata = [];
+  let f = action.find
+  let fdata = []
   state.data.forEach((value)=>{
     if (value.message.indexOf(f) >= 0){
-      fdata.push(value);
+      fdata.push(value)
     }
-  });
+  })
   return {
     data:state.data,
     message:'find "' + f + '":',
     mode:'find',
     fdata:fdata
-  };
+  }
 }
 
 // メモ削除のレデュース処理
 function deleteReduce(state, action){
-  let newdata = state.data.slice();
-  newdata.splice(action.index, 1);
+  let newdata = state.data.slice()
+  newdata.splice(action.index, 1)
   return {
     data:newdata,
     message:'delete "' + action.index + '":',
@@ -2410,64 +2410,64 @@ export function findMemo(text) {
 }
 
 // ストアを作成
-export default createStore(memoReducer);
+export default createStore(memoReducer)
 
 
 
 
 ▼リスト4-6
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 
-import Item from './Item';
+import Item from './Item'
 
 
 class Memo extends Component {
 
 
   render(){
-    let data;
-    let n = 0;
+    let data
+    let n = 0
     switch (this.props.mode){
       case 'default':
       data = this.props.data.map((value)=>(
         <Item key={value.message} value={value} index={n++} />
-      ));
-      break;
+      ))
+      break
 
       case 'find':
       data = this.props.fdata.map((value)=>(
         <Item key={value.message} value={value} index={n++}/>
-      ));
-      break;
+      ))
+      break
 
 
       case 'delete':
       data = this.props.data.map((value)=>(
         <Item key={value.message} value={value} index={n++} />
-      ));
-      break;
+      ))
+      break
 
 
       default:
       data = this.props.data.map((value)=>(
         <Item key={value.message} value={value} index={n++} />
-      ));
+      ))
     }
     return (
       <table><tbody>{data}</tbody></table>
-    );
+    )
   }
 }
-export default connect((state)=>state)(Memo);
+export default connect((state)=>state)(Memo)
 
 
 
 
 ▼リスト4-7
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 
 class Item extends Component {
@@ -2496,25 +2496,25 @@ class Item extends Component {
   }
 
   render(){
-    let d = this.props.value.created;
-    let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+    let d = this.props.value.created
+    let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
     return (
     <tr><th style={this.th}>No, {this.props.index}</th>
       <td style={this.td}>{this.props.value.message}</td>
       <td style={this.date}>{f}</td>
     </tr>
-    );
+    )
   }
 }
-export default connect()(Item);
+export default connect()(Item)
 
 
 
 
 ▼リスト4-8
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addMemo } from './Store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addMemo } from './Store'
 
 
 class AddForm extends Component {
@@ -2531,29 +2531,29 @@ class AddForm extends Component {
   }
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       message:''
     }
-    this.doChange = this.doChange.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.doChange = this.doChange.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
   doChange(e){
     this.setState({
       message: e.target.value
-    });
+    })
   }
 
 
   doAction(e){
-    e.preventDefault();
-    let action = addMemo(this.state.message);
-    this.props.dispatch(action);
+    e.preventDefault()
+    let action = addMemo(this.state.message)
+    this.props.dispatch(action)
     this.setState({
       message: ''
-    });
+    })
   }
 
 
@@ -2567,18 +2567,18 @@ class AddForm extends Component {
         <input type="submit" style={this.btn} value="Add"/>
         </form>
       </div>
-    );
+    )
   }
 }
-export default connect((state)=>state)(AddForm);
+export default connect((state)=>state)(AddForm)
 
 
 
 
 ▼リスト4-9
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { deleteMemo } from './Store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { deleteMemo } from './Store'
 
 
 class DelForm extends Component {
@@ -2595,37 +2595,37 @@ class DelForm extends Component {
   }
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       number:0
     }
-    this.doChange = this.doChange.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.doChange = this.doChange.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
   doChange(e){
     this.setState({
       number: e.target.value
-    });
+    })
   }
 
 
   doAction(e){
-    e.preventDefault();
-    let action = deleteMemo(this.state.number);
-    this.props.dispatch(action);
+    e.preventDefault()
+    let action = deleteMemo(this.state.number)
+    this.props.dispatch(action)
     this.setState({
       number: 0
-    });
+    })
   }
 
 
   render(){
-    let n = 0;
+    let n = 0
     let items = this.props.data.map((value)=>(
       <option key={n} value={n++}>{value.message.substring(0,10)}</option>
-    ));
+    ))
     return (
       <div>
         <form onSubmit={this.doAction}>
@@ -2636,18 +2636,18 @@ class DelForm extends Component {
         <input type="submit" style={this.btn} value="Del"/>
         </form>
       </div>
-    );
+    )
   }
 }
-export default connect((state)=>state)(DelForm);
+export default connect((state)=>state)(DelForm)
 
 
 
 
 ▼リスト4-10
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { findMemo } from './Store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { findMemo } from './Store'
 
 
 class FindForm extends Component {
@@ -2663,26 +2663,26 @@ class FindForm extends Component {
   }
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       find:''
     }
-    this.doChange = this.doChange.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.doChange = this.doChange.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
   doChange(e){
     this.setState({
       find: e.target.value
-    });
+    })
   }
 
 
   doAction(e){
-    e.preventDefault();
-    let action = findMemo(this.state.find);
-    this.props.dispatch(action);
+    e.preventDefault()
+    let action = findMemo(this.state.find)
+    this.props.dispatch(action)
   }
 
 
@@ -2693,24 +2693,24 @@ class FindForm extends Component {
           style={this.input} value={this.state.message} />
         <input type="submit" style={this.btn} value="Find"/>
       </form>
-    );
+    )
   }
 }
-export default connect((state)=>state)(FindForm);
+export default connect((state)=>state)(FindForm)
 
 
 
 
 ▼リスト4-11
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
-import './index.css';
-import App from './App';
+import './index.css'
+import App from './App'
 
 
 // ステートの値
@@ -2727,19 +2727,19 @@ function counter(state = state_value, action) {
         return {
             counter:state.counter + 1,
             message:"INCREMENT"
-        };
+        }
         case 'DECREMENT':
         return {
             counter:state.counter - 1,
             message:"DECREMENT"
-        };
+        }
         case 'RESET':
         return {
             counter:0,
             message:"RESET"
-        };
+        }
         default:
-        return state;
+        return state
     }
 }
 
@@ -2769,15 +2769,15 @@ ReactDOM.render(
         </PersistGate>
     </Provider>,
     document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト4-12
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import './App.css'
 
 
 // Appコンポーネント
@@ -2785,7 +2785,7 @@ class App extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
   }
 
   render() {
@@ -2795,11 +2795,11 @@ class App extends Component {
         <Message />
         <Button />
       </div>
-    );
+    )
   }
 }
 // ストアのコネクト
-App = connect()(App);
+App = connect()(App)
 
 
 // メッセージ表示のコンポーネント
@@ -2814,11 +2814,11 @@ class Message extends Component {
       <p style={this.style}>
         {this.props.message}: {this.props.counter}
       </p>
-    );
+    )
   }
 }
 // ストアのコネクト
-Message = connect((state)=>state)(Message);
+Message = connect((state)=>state)(Message)
 
 
 // ボタンのコンポーネント
@@ -2829,18 +2829,18 @@ class Button extends Component {
   }
 
   constructor(props){
-    super(props);
-    this.doAction = this.doAction.bind(this);
+    super(props)
+    this.doAction = this.doAction.bind(this)
   }
 
   // ボタンクリックでディスパッチを実行
   doAction(e){
     if (e.shiftKey){
-      this.props.dispatch({ type:'DECREMENT' });
+      this.props.dispatch({ type:'DECREMENT' })
     } else if (e.ctrlKey){
-      this.props.dispatch({ type:'RESET' });
+      this.props.dispatch({ type:'RESET' })
     } else {
-      this.props.dispatch({ type:'INCREMENT' });
+      this.props.dispatch({ type:'INCREMENT' })
     }
   }
 
@@ -2851,45 +2851,45 @@ class Button extends Component {
           onClick={this.doAction}>
         click
       </button>
-    );
+    )
   }
 }
 // ストアのコネクト
-Button = connect()(Button);
+Button = connect()(Button)
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト4-13
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import { PersistGate } from 'redux-persist/integration/react';
-import './index.css';
-import App from './App';
-import MemoStore, { memoReducer } from './memo/Store';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import { PersistGate } from 'redux-persist/integration/react'
+import './index.css'
+import App from './App'
+import MemoStore, { memoReducer } from './memo/Store'
 
 
 // Redux Persistの設定
 const persistConfig = {
     key: 'memo',
     storage,
-};
+}
 
 
 // パーシストレデューサーの作成
-const persistedReducer = persistReducer(persistConfig, memoReducer);
+const persistedReducer = persistReducer(persistConfig, memoReducer)
 
 
 // ストア、パーシスターの作成
-let store = createStore(persistedReducer);
-let pstore = persistStore(store);
+let store = createStore(persistedReducer)
+let pstore = persistStore(store)
 
 
 // 表示をレンダリング
@@ -2901,31 +2901,31 @@ ReactDOM.render(
         </PersistGate>
     </Provider>,
     document.getElementById('root')
-);
+)
 
 
-export default pstore;
+export default pstore
 
 
 
 
 ▼リスト4-14
 function addReduce(state, action){
-  let d = new Date();
+  let d = new Date()
   let f = d.getHours() + ':' + d.getMinutes()
-    + ':' + d.getSeconds();
+    + ':' + d.getSeconds()
   let data = {
     message:action.message,
     created:f
-  };
-  let newdata = state.data.slice();
-  newdata.unshift(data);
+  }
+  let newdata = state.data.slice()
+  newdata.unshift(data)
   return {
     data:newdata,
     message:'Added!',
     mode:'default',
     fdata:[]
-  };
+  }
 }
 
 
@@ -2938,7 +2938,7 @@ render(){
     <td style={this.td}>{this.props.value.message}</td>
     <td style={this.date}>{this.props.value.created}</td>
   </tr>
-  );
+  )
 }
 
 
@@ -2948,7 +2948,7 @@ const initData = {
   message:'please type message:',
   mode:'default',
   fdata:[]
-};
+}
 
 
 
@@ -2957,7 +2957,7 @@ const initData = {
 const persistConfig = {
     key: 'memo',
     storage:storage,
-};
+}
 
 
 
@@ -2968,15 +2968,15 @@ const persistConfig = {
     storage:storage,
     blacklist: ['message', 'mode', 'fdata'],
     whitelist: ['data']
-};
+}
 
 
 
 
 ▼リスト4-19
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import pstore from '../index';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import pstore from '../index'
 
 
 class PersistForm extends Component {
@@ -2990,24 +2990,24 @@ class PersistForm extends Component {
   }
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       check:'on',
     }
-    this.doChange = this.doChange.bind(this);
+    this.doChange = this.doChange.bind(this)
   }
 
 
   doChange(e){
-    let f = e.target.checked;
+    let f = e.target.checked
     this.setState({
       check: f ? 'on' : ''
-    });
+    })
     if (f){
-      pstore.persist();
-      pstore.flush();
+      pstore.persist()
+      pstore.flush()
     } else {
-      pstore.pause();
+      pstore.pause()
     }
   }
 
@@ -3020,18 +3020,18 @@ class PersistForm extends Component {
           style={this.check} checked={this.state.check} />
         Persist</label>
       </div>
-    );
+    )
   }
 
 
 }
-export default connect((state)=>state)(PersistForm);
+export default connect((state)=>state)(PersistForm)
 
 
 
 
 ▼リスト4-20
-// import PersistForm from './memo/PersistForm'; を追記しておく
+// import PersistForm from './memo/PersistForm' を追記しておく
 
 
 render() {
@@ -3047,7 +3047,7 @@ render() {
       </tr></tbody></table>
       <Memo />
     </div>
-  );
+  )
 }
 
 
@@ -3135,8 +3135,8 @@ module.exports = {
     "page": "/",
     "query": {},
     "buildId": "…略…",
-    "nextExport": true };
-   __NEXT_LOADED_PAGES__ = [];
+    "nextExport": true }
+   __NEXT_LOADED_PAGES__ = []
    __NEXT_REGISTER_PAGE = function (r, f) {
    __NEXT_LOADED_PAGES__.push([r, f])
   }</script>
@@ -3184,17 +3184,17 @@ export default () =><div>
 export default () =><div>
   <style jsx>{`
   h1 {
-    font-size:68pt;
-    font-weight:bold;
-    text-align:right;
-    letter-spacing:-8px;
-    color:#f0f0f0;
-    margin:-32px 0px;
+    font-size:68pt
+    font-weight:bold
+    text-align:right
+    letter-spacing:-8px
+    color:#f0f0f0
+    margin:-32px 0px
   }
   p {
-      margin:0px;
-      color:#666;
-      font-size:16pt;
+      margin:0px
+      color:#666
+      font-size:16pt
   }
   `}</style>
   <h1>Next.js</h1>
@@ -3206,7 +3206,7 @@ export default () =><div>
 
 
 ▼リスト5-8――index.js
-import Link from 'next/link';
+import Link from 'next/link'
 
 
 const h1 = {……略……}
@@ -3219,7 +3219,7 @@ export default () =><div>
   <hr />
   <div>
     <Link href="/other">
-      <a>Go to Other page &gt;&gt;</a>
+      <a>Go to Other page &gt&gt</a>
     </Link>
   </div>
 </div>
@@ -3241,7 +3241,7 @@ export default () =><div>
   <hr/>
   <div>
     <Link href="/">
-      <a>&lt;&lt; Back to Index page</a>
+      <a>&lt&lt Back to Index page</a>
     </Link>
   </div>
 </div>
@@ -3252,29 +3252,29 @@ export default () =><div>
 ▼リスト5-10
 export default <style>{`
   body {
-    margin:10px;
+    margin:10px
   }
   h1 {
-    font-size:68pt;
-    font-weight:bold;
-    text-align:right;
-    letter-spacing:-8px;
-    color:#f0f0f0;
-    margin:-32px 0px;
+    font-size:68pt
+    font-weight:bold
+    text-align:right
+    letter-spacing:-8px
+    color:#f0f0f0
+    margin:-32px 0px
   }
   p {
-      margin:0px;
-      color:#666;
-      font-size:16pt;
+      margin:0px
+      color:#666
+      font-size:16pt
   }
-`}</style>;
+`}</style>
 
 
 
 
 ▼リスト5-11
-import Link from 'next/link';
-import style from '../static/Style';
+import Link from 'next/link'
+import style from '../static/Style'
 
 
 export default () =><div>
@@ -3284,7 +3284,7 @@ export default () =><div>
   <hr />
   <div>
     <Link href="/other">
-      <button>Go to Other page &gt;&gt;</button>
+      <button>Go to Other page &gt&gt</button>
     </Link>
   </div>
 </div>
@@ -3293,7 +3293,7 @@ export default () =><div>
 
 
 ▼リスト5-12
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
 export default class Counter extends Component {
@@ -3305,23 +3305,23 @@ export default class Counter extends Component {
 
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       counter:0,
       msg:'counter: 0',
-    };
-    this.doAction = this.doAction.bind(this);
+    }
+    this.doAction = this.doAction.bind(this)
   }
 
 
   doAction(){
     this.setState((state)=>{
-      const num = state.counter + 1;
+      const num = state.counter + 1
       return ({
         counter: num,
         msg: "counter: " + num
-      });
-    });
+      })
+    })
   }
 
 
@@ -3329,7 +3329,7 @@ export default class Counter extends Component {
     return <p onClick={this.doAction}
         style={this.msgStyle}>
       {this.state.msg}
-    </p>;
+    </p>
   }
 }
 
@@ -3337,8 +3337,8 @@ export default class Counter extends Component {
 
 
 ▼リスト5-13
-import Counter from '../components/Counter';
-import style from '../static/Style';
+import Counter from '../components/Counter'
+import style from '../static/Style'
 
 
 export default () =><div>
@@ -3353,10 +3353,10 @@ export default () =><div>
 
 
 ▼リスト5-14
-import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import style from '../static/Style';
+import React, { Component } from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import style from '../static/Style'
 
 
 class Layout extends Component {
@@ -3368,18 +3368,18 @@ class Layout extends Component {
         title={this.props.title} />
       {this.props.children}
       <Footer footer="copyright SYODA-Tuyano."/>
-    </div>);
+    </div>)
   }
 
 
 }
-export default Layout;
+export default Layout
 
 
 
 
 ▼リスト5-15
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
 class Header extends Component {
@@ -3388,79 +3388,79 @@ class Header extends Component {
     return (<header>
       <div>{this.props.header}</div>
       <h1>{this.props.title}</h1>
-    </header>);
+    </header>)
   }
 }
-export default Header;
+export default Header
 
 
 
 
 ▼リスト5-16
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Footer extends Component {
 
   render() {
     return (<footer>
       <div>{this.props.footer}</div>
-    </footer>);
+    </footer>)
   }
 }
-export default Footer;
+export default Footer
 
 
 
 ▼リスト5-17
-import css from 'styled-jsx/css';
+import css from 'styled-jsx/css'
 
 
 export default <style>{`
   body {
-    margin:10px;
-    padding:5px;
-    color:#669;
+    margin:10px
+    padding:5px
+    color:#669
   }
   header {
-    font-size:64pt;
-    font-weight:bold;
-    text-align:right;
-    letter-spacing:-8px;
-    color:#ddddff;
-    margin:-32px 5px;
+    font-size:64pt
+    font-weight:bold
+    text-align:right
+    letter-spacing:-8px
+    color:#ddddff
+    margin:-32px 5px
   }
   footer {
-    color:#99c;
-    font-size:12pt;
-    text-align:right;
-    border-bottom:1px solid #99c;
-    margin:50px 0px 10px 0px;
-    position: relative;
-    bottom: 10px;
-    right: 10px;
-    left: 10px;
+    color:#99c
+    font-size:12pt
+    text-align:right
+    border-bottom:1px solid #99c
+    margin:50px 0px 10px 0px
+    position: relative
+    bottom: 10px
+    right: 10px
+    left: 10px
   }
   h1 {
-    font-size:22pt;
-    font-weight:bold;
-    text-align:left;
-    letter-spacing:0px;
-    color:#77a;
-    margin:-50px 0px 50px 0px;
+    font-size:22pt
+    font-weight:bold
+    text-align:left
+    letter-spacing:0px
+    color:#77a
+    margin:-50px 0px 50px 0px
   }
   p {
-      margin:0px;
-      color:#669;
-      font-size:16pt;
+      margin:0px
+      color:#669
+      font-size:16pt
   }
-`}</style>;
+`}</style>
 
 
 
 
 ▼リスト5-18――index.js
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Link from 'next/link'
+import Layout from '../components/Layout'
 
 
 export default () =>(
@@ -3468,17 +3468,17 @@ export default () =>(
     <p>Welcome to next.js!</p>
     <hr/>
     <Link href="./other"><button>
-      go to Other &gt;&gt;
+      go to Other &gt&gt
     </button></Link>
   </Layout>
-);
+)
 
 
 
 
 ▼リスト5-19――other.js
 import Link from 'next/link'
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 
 
 export default () =>(
@@ -3487,7 +3487,7 @@ export default () =>(
     <hr/>
     <div>
       <Link href="/">
-        <button>&lt;&lt; Back to Top</button>
+        <button>&lt&lt Back to Top</button>
       </Link>
     </div>
   </Layout>
@@ -3497,11 +3497,11 @@ export default () =>(
 
 
 ▼リスト5-20
-import React, { Component } from 'react';
-import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import style from '../static/Style';
+import React, { Component } from 'react'
+import Head from 'next/head'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import style from '../static/Style'
 
 
 class Layout extends Component {
@@ -3519,27 +3519,27 @@ class Layout extends Component {
         title={this.props.title} />
       {this.props.children}
       <Footer footer="copyright SYODA-Tuyano."/>
-    </div>);
+    </div>)
   }
 
 
 }
-export default Layout;
+export default Layout
 
 
 
 
 ▼リスト5-21
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
 class Image extends Component{
 
 
   constructor(props){
-    super(props);
-    this.fname = "./static/" + props.fname;
-    this.size = props.size + "px";
+    super(props)
+    this.fname = "./static/" + props.fname
+    this.size = props.size + "px"
   }
 
 
@@ -3547,18 +3547,18 @@ class Image extends Component{
     return (
       <img width={this.size} border="1"
         src={this.fname} />
-    );
+    )
   }
 }
-export default Image;
+export default Image
 
 
 
 
 ▼リスト5-22
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import Image from '../static/Image';
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import Image from '../static/Image'
 
 
 export default () =>(
@@ -3567,17 +3567,17 @@ export default () =>(
     <Image fname="image.jpg" size="250"/>
     <hr/>
     <Link href="./other"><button>
-      go to Other &gt;&gt;
+      go to Other &gt&gt
     </button></Link>
   </Layout>
-);
+)
 
 
 
 
 ▼リスト5-23
-import { Component } from 'react';
-import {initStore} from '../store';
+import { Component } from 'react'
+import {initStore} from '../store'
 
 
 const isServer = typeof window === 'undefined'
@@ -3632,10 +3632,10 @@ export default (App) => {
 
 
 ▼リスト5-24
-import App, {Container} from 'next/app';
-import React from 'react';
-import withReduxStore from '../lib/redux-store';
-import { Provider } from 'react-redux';
+import App, {Container} from 'next/app'
+import React from 'react'
+import withReduxStore from '../lib/redux-store'
+import { Provider } from 'react-redux'
 
 
 class _App extends App {
@@ -3655,8 +3655,8 @@ class _App extends App {
 
 
 ▼リスト5-25
-import { createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux'
+import thunkMiddleware from 'redux-thunk'
 
 
 // ステート初期値
@@ -3673,19 +3673,19 @@ function counterReducer (state = initial, action) {
       return {
         message: 'INCREMENT',
         count: state.count + 1
-      };
+      }
     case 'DECREMENT':
       return {
         message: 'DECREMENT',
         count: state.count - 1
-      };
+      }
     case 'RESET':
       return {
         message: 'RESET',
         count: initial.count
-      };
+      }
     default:
-      return state;
+      return state
   }
 }
 
@@ -3700,8 +3700,8 @@ export function initStore(state = initial) {
 
 
 ▼リスト5-26
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
 
 
 class Counter extends Component {
@@ -3712,23 +3712,23 @@ class Counter extends Component {
 
 
   constructor(props) {
-    super(props);
-    this.doAction = this.doAction.bind(this);
-    this.reset = this.reset.bind(this);
+    super(props)
+    this.doAction = this.doAction.bind(this)
+    this.reset = this.reset.bind(this)
   }
 
 
   doAction(e){
     if (e.shiftKey){
-      return this.props.dispatch({ type:'DECREMENT' });
+      return this.props.dispatch({ type:'DECREMENT' })
     } else {
-      return this.props.dispatch({ type:'INCREMENT' });
+      return this.props.dispatch({ type:'INCREMENT' })
     }
   }
 
 
   reset() {
-    return this.props.dispatch({ type:'RESET' });
+    return this.props.dispatch({ type:'RESET' })
   }
 
 
@@ -3746,16 +3746,16 @@ class Counter extends Component {
 }
 
 
-Counter = connect((state)=> state)(Counter);
-export default Counter;
+Counter = connect((state)=> state)(Counter)
+export default Counter
 
 
 
 
 ▼リスト5-27――index.js
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import Counter from '../components/Counter';
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import Counter from '../components/Counter'
 
 
 export default () =>(
@@ -3763,18 +3763,18 @@ export default () =>(
     <Counter/>
     <hr/>
     <Link href="./other"><button>
-      go to Other &gt;&gt;
+      go to Other &gt&gt
     </button></Link>
   </Layout>
-);
+)
 
 
 
 
 ▼リスト5-28――other.js
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import Counter from '../components/Counter';
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import Counter from '../components/Counter'
 
 
 export default () =>(
@@ -3783,11 +3783,11 @@ export default () =>(
     <hr/>
     <div>
       <Link href="/">
-        <button>&lt;&lt; Back to Top</button>
+        <button>&lt&lt Back to Top</button>
       </Link>
     </div>
   </Layout>
-);
+)
 
 
 
@@ -3811,19 +3811,19 @@ function calcReducer(state = intitial, action) {
   switch (action.type) {
     // 計算実行
     case 'ENTER':
-      let data2 = state.data.slice();
-      let s = action.value;
-      data2.unshift(s);
-      let num = s.replace(/[^0-9]/g,"");
-      let number2 = state.number.slice();
-      number2.unshift(num);
-      let result = (state.result * 1) + (num * 1);
+      let data2 = state.data.slice()
+      let s = action.value
+      data2.unshift(s)
+      let num = s.replace(/[^0-9]/g,"")
+      let number2 = state.number.slice()
+      number2.unshift(num)
+      let result = (state.result * 1) + (num * 1)
       return {
         message:'ENTER',
         data:data2,
         number:number2,
         result:result
-      };
+      }
     // リセット
     case 'RESET':
       return {
@@ -3831,10 +3831,10 @@ function calcReducer(state = intitial, action) {
         data:[],
         number:[],
         result:0
-      };
+      }
     // デフォルト
     default:
-      return state;
+      return state
   }
 }
 
@@ -3861,27 +3861,27 @@ class Calc extends Component {
 
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       input: '',
-    };
-    this.onChange = this.onChange.bind(this);
-    this.onKeyPress = this.onKeyPress.bind(this);
-    this.doAction = this.doAction.bind(this);
-    this.reset = this.reset.bind(this);
+    }
+    this.onChange = this.onChange.bind(this)
+    this.onKeyPress = this.onKeyPress.bind(this)
+    this.doAction = this.doAction.bind(this)
+    this.reset = this.reset.bind(this)
   }
 
 
   onChange(e){
     this.setState({
       input: e.target.value
-    });
+    })
   }
 
 
   onKeyPress(e){
     if (event.keyCode == 13) {
-      this.doAction(e);
+      this.doAction(e)
     }
   }
 
@@ -3889,28 +3889,28 @@ class Calc extends Component {
   doAction(e){
     this.setState({
       input: '',
-    });
+    })
     return this.props.dispatch({ type:'ENTER',
-      value:this.state.input });
+      value:this.state.input })
   }
 
 
   reset() {
     this.setState({
       input: '',
-    });
-    return this.props.dispatch({ type:'RESET' });
+    })
+    return this.props.dispatch({ type:'RESET' })
   }
 
 
   render () {
-    let result = [];
-    let n = this.props.data.length;
-    for(let i = 0;i < n;i++){
+    let result = []
+    let n = this.props.data.length
+    for(let i = 0i < ni++){
       result.push(<tr key={i}>
         <th>{this.props.data[i]}</th>
         <td>{this.props.number[i]}</td>
-      </tr>);
+      </tr>)
     }
     return (
       <div>
@@ -3932,16 +3932,16 @@ class Calc extends Component {
   }
 }
 
-Calc = connect((state)=> state)(Calc);
-export default Calc;
+Calc = connect((state)=> state)(Calc)
+export default Calc
 
 
 
 
 ▼リスト5-31
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import Calc from '../components/Calc';
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import Calc from '../components/Calc'
 
 
 export default () =>(
@@ -3950,17 +3950,17 @@ export default () =>(
     <hr />
     <div>
       <Link href="/">
-        <button>&lt;&lt; Back to Top</button>
+        <button>&lt&lt Back to Top</button>
       </Link>
     </div>
     </Layout>
-);
+)
 
 
 
 
 ▼リスト5-32
-import css from 'styled-jsx/css';
+import css from 'styled-jsx/css'
 
 
 export default <style>{`
@@ -3969,33 +3969,33 @@ export default <style>{`
   footer {……略……}
   h1 {……略……}
   p {
-      margin:0px;
-      color:#669;
-      font-size:16pt;
+      margin:0px
+      color:#669
+      font-size:16pt
   }
   hr {
-    margin:25px 0px;
+    margin:25px 0px
   }
   tr {
-    margin:0px;
+    margin:0px
   }
   th {
-    font-size:14pt;
-    font-weight:plain;
-    text-align:left;
-    padding:0px 20px;
-    margin:0px;
-    border-bottom:1px solid gray;
+    font-size:14pt
+    font-weight:plain
+    text-align:left
+    padding:0px 20px
+    margin:0px
+    border-bottom:1px solid gray
   }
   td {
-    font-size:14pt;
-    font-weight:plain;
-    text-align:right;
-    padding:0px 20px;
-    margin:0px;
-    border-bottom:1px solid gray;
+    font-size:14pt
+    font-weight:plain
+    text-align:right
+    padding:0px 20px
+    margin:0px
+    border-bottom:1px solid gray
   }
-`}</style>;
+`}</style>
 
 
 
@@ -4011,54 +4011,54 @@ export default <style>{`
     projectId: "プロジェクト",
     storageBucket: "プロジェクト.appspot.com",
     messagingSenderId: " ID番号 "
-  };
-  firebase.initializeApp(config);
+  }
+  firebase.initializeApp(config)
 </script>
 
 
 
 
 ▼リスト6-2
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
 
 
 // 表示をレンダリング
 ReactDOM.render(
     <App />,
     document.getElementById('root')
-);
+)
 
 
 
 
 ▼リスト6-3
 th {
-  font-size:14pt;
-  text-align:left;
-  padding:5px 20px;
-  margin:0px;
-  border-bottom:1px solid gray;
+  font-size:14pt
+  text-align:left
+  padding:5px 20px
+  margin:0px
+  border-bottom:1px solid gray
 }
 td {
-  font-size:14pt;
-  font-weight:plain;
-  text-align:left;
-  padding:5px 20px;
-  margin:0px;
-  border-bottom:1px solid gray;
+  font-size:14pt
+  font-weight:plain
+  text-align:left
+  padding:5px 20px
+  margin:0px
+  border-bottom:1px solid gray
 }
 
 
 
 
 ▼リスト6-4
-import React, { Component } from 'react';
-import './App.css';
-import Sampledata from './fire/SampleData';
-import firebase from "firebase";
+import React, { Component } from 'react'
+import './App.css'
+import Sampledata from './fire/SampleData'
+import firebase from "firebase"
 
 
 // Firebaseの設定
@@ -4069,11 +4069,11 @@ var config = {
   projectId: "プロジェクト",
   storageBucket: "プロジェクト.appspot.com",
   messagingSenderId: " ID番号 "
-};
+}
 
 
 // Firebaseの初期化
-firebase.initializeApp(config);
+firebase.initializeApp(config)
 
 
 // Appコンポーネント
@@ -4087,20 +4087,20 @@ class App extends Component {
         <h2>Sample data.</h2>
         <Sampledata />
       </div>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
 
 
 
 
 ▼リスト6-5
 import React, {Component} from 'react'
-import firebase from "firebase";
-import "firebase/storage";
+import firebase from "firebase"
+import "firebase/storage"
 
 
 class Sampledata extends Component {
@@ -4111,11 +4111,11 @@ class Sampledata extends Component {
 
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       data:[]
     }
-    this.getFireData();
+    this.getFireData()
 
 
   }
@@ -4123,39 +4123,39 @@ class Sampledata extends Component {
 
   // Firebaseからのデータ取得
   getFireData(){
-    let db = firebase.database();
-    let ref = db.ref('sample/');
-    let self = this;
+    let db = firebase.database()
+    let ref = db.ref('sample/')
+    let self = this
     ref.orderByKey()
       .limitToFirst(10)
       .on('value', (snapshot)=>{
         self.setState({
           data:snapshot.val()
-        });
-    });
+        })
+    })
   }
 
 
   // データ表示の生成
   getTableData(){
-    let result = [];
+    let result = []
     if (this.state.data == null || this.state.data.length == 0){
-      return [<tr key="0"><th>NO DATA.</th></tr>];
+      return [<tr key="0"><th>NO DATA.</th></tr>]
     }
     for(let i in this.state.data){
       result.push(<tr key={i}>
         <th>{this.state.data[i].ID}</th>
         <td>{this.state.data[i].name}</td>
         <td>{this.state.data[i].message}</td>
-      </tr>);
+      </tr>)
     }
-    return result;
+    return result
   }
 
 
   render(){
     if (this.state.data.length == 0){
-      this.getFireData();
+      this.getFireData()
     }
     return (
       <table><tbody>
@@ -4166,7 +4166,7 @@ class Sampledata extends Component {
 }
 
 
-export default Sampledata;
+export default Sampledata
 
 
 
@@ -4174,7 +4174,7 @@ export default Sampledata;
 ▼リスト6-6
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import firebase from "firebase";
+import firebase from "firebase"
 
 // Firebaseの初期化
 var config = {
@@ -4184,15 +4184,15 @@ var config = {
   projectId: "プロジェクト",
   storageBucket: "プロジェクト.appspot.com",
   messagingSenderId: " ID番号 "
-};
-
-var fireapp;
-try {
-  firebase.initializeApp(config);
-} catch (error) {
-  console.log(error.message);
 }
-export default fireapp;
+
+var fireapp
+try {
+  firebase.initializeApp(config)
+} catch (error) {
+  console.log(error.message)
+}
+export default fireapp
 
 // ステート初期値
 const initial = {
@@ -4203,10 +4203,10 @@ function fireReducer(state = intitial, action) {
   switch (action.type) {
     // ダミー
     case 'TESTACTION':
-      return state;
+      return state
     // デフォルト
     default:
-      return state;
+      return state
   }
 }
 
@@ -4220,38 +4220,38 @@ export function initStore(state = initial) {
 
 
 ▼リスト6-7
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import Sampledata from '../components/Sampledata';
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import Sampledata from '../components/Sampledata'
 
 
 export default () =>(
   <Layout header="Fire" title="Sample data.">
     <Sampledata />
   </Layout>
-);
+)
 
 
 
 
 ▼リスト6-8
-import Layout from '../components/Layout';
-import Firefind from '../components/Firefind';
+import Layout from '../components/Layout'
+import Firefind from '../components/Firefind'
 
 
 export default () =>(
   <Layout header="Fire" title="Sample data.">
     <Firefind />
   </Layout>
-);
+)
 
 
 
 
 ▼リスト6-9
 import React, {Component} from 'react'
-import firebase from "firebase";
-import "firebase/storage";
+import firebase from "firebase"
+import "firebase/storage"
 
 
 class Firefind extends Component {
@@ -4262,13 +4262,13 @@ class Firefind extends Component {
 
   // 初期化。ステートとイベント用メソッドの設定
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       input:'',
       data:[]
     }
-    this.doChange = this.doChange.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.doChange = this.doChange.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
@@ -4282,39 +4282,39 @@ class Firefind extends Component {
 
   // ボタンクリック時の処理
   doAction(e){
-    this.findFireData(this.state.input);
+    this.findFireData(this.state.input)
   }
 
 
   // 検索の実行
   findFireData(s){
-    let db = firebase.database();
-    let ref = db.ref('sample/');
-    let self = this;
+    let db = firebase.database()
+    let ref = db.ref('sample/')
+    let self = this
     ref.orderByKey()
       .equalTo(s)
       .on('value', (snapshot)=>{
         self.setState({
           data:snapshot.val()
-        });
-    });
+        })
+    })
   }
 
 
   // テーブルの内容の作成
   getTableData(){
-    let result = [];
+    let result = []
     if (this.state.data == null || this.state.data.length == 0){
-      return [<tr key="0"><th>NO DATA.</th></tr>];
+      return [<tr key="0"><th>NO DATA.</th></tr>]
     }
     for(let i in this.state.data){
       result.push(<tr key={i}>
         <th>{this.state.data[i].ID}</th>
         <th>{this.state.data[i].name}</th>
         <td>{this.state.data[i].message}</td>
-      </tr>);
+      </tr>)
     }
-    return result;
+    return result
   }
 
 
@@ -4333,30 +4333,30 @@ class Firefind extends Component {
 }
 
 
-export default Firefind;
+export default Firefind
 
 
 
 
 ▼リスト6-10
-import Layout from '../components/Layout';
-import Fireadd from '../components/Fireadd';
+import Layout from '../components/Layout'
+import Fireadd from '../components/Fireadd'
 
 
 export default () =>(
   <Layout header="Fire" title="add data.">
     <Fireadd />
   </Layout>
-);
+)
 
 
 
 
 ▼リスト6-11
 import React, {Component} from 'react'
-import firebase from "firebase";
-import Router from 'next/router';
-import "firebase/storage";
+import firebase from "firebase"
+import Router from 'next/router'
+import "firebase/storage"
 
 
 class Fireadd extends Component {
@@ -4368,17 +4368,17 @@ class Fireadd extends Component {
 
   // 初期化処理
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       name_str:'',
       msg_str:'',
       lastID:-1,
       data:[]
     }
-    this.getLastID(); // 最後のIDのチェック
-    this.doChangeName = this.doChangeName.bind(this);
-    this.doChangeMsg = this.doChangeMsg.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.getLastID() // 最後のIDのチェック
+    this.doChangeName = this.doChangeName.bind(this)
+    this.doChangeMsg = this.doChangeMsg.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
@@ -4395,50 +4395,50 @@ class Fireadd extends Component {
 
 
   doAction(e){
-    this.addFireData();
-    Router.push('/fire');
+    this.addFireData()
+    Router.push('/fire')
   }
 
 
   // 最後のIDを取得
   getLastID(){
-    let db = firebase.database();
-    let ref = db.ref('sample/');
-    let self = this;
+    let db = firebase.database()
+    let ref = db.ref('sample/')
+    let self = this
     ref.orderByKey()
       .limitToLast(1)
       .on('value', (snapshot)=>{
-        let res = snapshot.val();
+        let res = snapshot.val()
         for(let i in res){
           self.setState({
             lastID:i
-          });
-          return;
+          })
+          return
         }
-    });
+    })
   }
 
 
   // データを追加する
   addFireData(){
     if (this.state.lastID == -1){
-      return;
+      return
     }
-    let id = this.state.lastID * 1 + 1;
-    let db = firebase.database();
-    let ref = db.ref('sample/' + id);
+    let id = this.state.lastID * 1 + 1
+    let db = firebase.database()
+    let ref = db.ref('sample/' + id)
     ref.set({
       ID: id,
       message: this.state.msg_str,
       name: this.state.name_str
-    });
+    })
   }
 
 
   // レンダリング
   render(){
     if (this.state.lastID == -1){
-      this.getLastID();
+      this.getLastID()
     }
     return (<div>
       {(this.state.lastID == -1)
@@ -4471,30 +4471,30 @@ class Fireadd extends Component {
 }
 
 
-export default Fireadd;
+export default Fireadd
 
 
 
 
 ▼リスト6-12
-import Layout from '../components/Layout';
-import Firedelete from '../components/Firedelete';
+import Layout from '../components/Layout'
+import Firedelete from '../components/Firedelete'
 
 
 export default () =>(
   <Layout header="Fire" title="delete data.">
     <Firedelete />
   </Layout>
-);
+)
 
 
 
 
 ▼リスト6-13
 import React, {Component} from 'react'
-import firebase from "firebase";
-import Router from 'next/router';
-import "firebase/storage";
+import firebase from "firebase"
+import Router from 'next/router'
+import "firebase/storage"
 
 
 class Firedelete extends Component {
@@ -4506,12 +4506,12 @@ class Firedelete extends Component {
 
   // 初期化処理
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       id_str:'',
     }
-    this.doChange = this.doChange.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.doChange = this.doChange.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
@@ -4523,17 +4523,17 @@ class Firedelete extends Component {
 
 
   doAction(e){
-    this.deleteFireData();
-    Router.push('/fire');
+    this.deleteFireData()
+    Router.push('/fire')
   }
 
 
   // 項目の削除
   deleteFireData(){
-    let id = this.state.id_str;
-    let db = firebase.database();
-    let ref = db.ref('sample/' + id);
-    ref.remove();
+    let id = this.state.id_str
+    let db = firebase.database()
+    let ref = db.ref('sample/' + id)
+    ref.remove()
   }
 
 
@@ -4560,7 +4560,7 @@ class Firedelete extends Component {
 }
 
 
-export default Firedelete;
+export default Firedelete
 
 
 
@@ -4568,7 +4568,7 @@ export default Firedelete;
 ▼リスト6-14
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import firebase from "firebase";
+import firebase from "firebase"
 
 
 // Firebase設定
@@ -4579,17 +4579,17 @@ var config = {
   projectId: "プロジェクト",
   storageBucket: "プロジェクト.appspot.com",
   messagingSenderId: " ID番号 "
-};
+}
 
 
 // Firebase初期化
-var fireapp;
+var fireapp
 try {
-  fireapp = firebase.initializeApp(config);
+  fireapp = firebase.initializeApp(config)
 } catch (error) {
-  console.log(error.message);
+  console.log(error.message)
 }
-export default fireapp;
+export default fireapp
 
 
 // ステート初期値
@@ -4607,10 +4607,10 @@ function fireReducer(state = intitial, action) {
   switch (action.type) {
     // ダミー
     case 'UPDATE_USER':
-      return action.value;
+      return action.value
     // デフォルト
     default:
-      return state;
+      return state
   }
 }
 
@@ -4625,9 +4625,9 @@ export function initStore(state = initial) {
 
 
 ▼リスト6-15
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import firebase from "firebase";
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import firebase from "firebase"
 
 
 class Account extends Component {
@@ -4638,16 +4638,16 @@ class Account extends Component {
 
 
   constructor(props) {
-    super(props);
-    //this.login_check();
-    this.login_check = this.login_check.bind(this);
+    super(props)
+    //this.login_check()
+    this.login_check = this.login_check.bind(this)
   }
 
 
   // ログイン処理
   login(){
-    let provider = new firebase.auth.GoogleAuthProvider();
-    var self = this;
+    let provider = new firebase.auth.GoogleAuthProvider()
+    var self = this
     firebase.auth().signInWithPopup(provider)
       .then((result)=>{
         this.props.dispatch({
@@ -4659,16 +4659,16 @@ class Account extends Component {
             data:this.props.data,
             items:this.props.items
           }
-        });
-        this.props.onLogined();
-    });
+        })
+        this.props.onLogined()
+    })
   }
 
 
   // ログアウト処理
   logout(){
-    console.log("logout");
-    firebase.auth().signOut();
+    console.log("logout")
+    firebase.auth().signOut()
     this.props.dispatch({
       type:'UPDATE_USER',
       value:{
@@ -4678,17 +4678,17 @@ class Account extends Component {
         data:[],
         items:[]
       }
-    });
-    this.props.onLogouted();
+    })
+    this.props.onLogouted()
   }
 
 
   // login,loguoutの✓
   login_check(){
     if (this.props.login == false){
-        this.login();
+        this.login()
     } else {
-      this.logout();
+      this.logout()
     }
   }
 
@@ -4702,23 +4702,23 @@ class Account extends Component {
           LOGINED: {this.props.username}
         </span>
       </p>
-    );
+    )
   }
 }
 
 
-Account = connect((state)=> state)(Account);
-export default Account;
+Account = connect((state)=> state)(Account)
+export default Account
 
 
 
 
 ▼リスト6-16
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Link from 'next/link'
+import Layout from '../components/Layout'
 
 
-import Address from '../components/Address';
+import Address from '../components/Address'
 
 
 export default () =>(
@@ -4731,18 +4731,18 @@ export default () =>(
       </Link>
     </div>
   </Layout>
-);
+)
 
 
 
 
 ▼リスト6-17
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import Router from 'next/router';
-import firebase from "firebase";
-import Lib from '../static/address_lib';
-import Account from '../components/Account';
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import Router from 'next/router'
+import firebase from "firebase"
+import Lib from '../static/address_lib'
+import Account from '../components/Account'
 
 
 class Address extends Component {
@@ -4753,32 +4753,32 @@ class Address extends Component {
 
 
   constructor(props) {
-    super(props);
-    this.logined = this.logined.bind(this);
+    super(props)
+    this.logined = this.logined.bind(this)
   }
 
 
   // login,logout処理
   logined(){
-    this.getFireData();
+    this.getFireData()
   }
   logouted(){
-    Router.push('/address');
+    Router.push('/address')
   }
 
 
   // Firebaseからデータを取得
   getFireData(){
     if (this.props.email == undefined ||
-      this.props.email == ''){ return; }
-    let email = Lib.encodeEmail(this.props.email);
-    let db = firebase.database();
-    let ref = db.ref('address/');
-    let self = this;
+      this.props.email == ''){ return }
+    let email = Lib.encodeEmail(this.props.email)
+    let db = firebase.database()
+    let ref = db.ref('address/')
+    let self = this
     ref.orderByKey()
       .equalTo(email)
       .on('value', (snapshot)=>{
-        let d = Lib.deepcopy(snapshot.val());
+        let d = Lib.deepcopy(snapshot.val())
         this.props.dispatch({
           type:'UPDATE_USER',
           value:{
@@ -4788,36 +4788,36 @@ class Address extends Component {
             data:d,
             items:self.getItem(d)
           }
-        });
-    });
+        })
+    })
   }
 
 
   // dataを元に表示項目を作成
   getItem(data){
-    if (data == undefined){ return; }
-    let res = [];
+    if (data == undefined){ return }
+    let res = []
     for (let i in data){
       for(let j in data[i]){
-        let email = Lib.decodeEmail(j);
-        let s = data[i][j]['name'];
+        let email = Lib.decodeEmail(j)
+        let s = data[i][j]['name']
 
 
         res.push(<li key={j} data-tag={email}
           onClick={this.go.bind(null, email)}>
           {data[i][j]['check'] == true ?
             <b>✓</b> : ''}{s} ({email})
-        </li>);
+        </li>)
       }
-      break;
+      break
     }
-    return res;
+    return res
   }
 
 
   // データ表示ページの移動
   go(email){
-    Router.push('/address_show?email=' + email);
+    Router.push('/address_show?email=' + email)
   }
 
 
@@ -4841,19 +4841,19 @@ class Address extends Component {
 }
 
 
-Address = connect((state)=> state)(Address);
-export default Address;
+Address = connect((state)=> state)(Address)
+export default Address
 
 
 
 
 ▼リスト6-18
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Link from 'next/link'
+import Layout from '../components/Layout'
 
 
-import AddressAdd from '../components/AddressAdd';
-import firebase from "firebase";
+import AddressAdd from '../components/AddressAdd'
+import firebase from "firebase"
 
 
 export default () =>(
@@ -4866,18 +4866,18 @@ export default () =>(
       </Link>
     </div>
   </Layout>
-);
+)
 
 
 
 
 ▼リスト6-19
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import Router from 'next/router';
-import firebase from "firebase";
-import Lib from '../static/address_lib';
-import Account from '../components/Account';
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import Router from 'next/router'
+import firebase from "firebase"
+import Lib from '../static/address_lib'
+import Account from '../components/Account'
 
 
 class AddressAdd extends Component {
@@ -4888,9 +4888,9 @@ class AddressAdd extends Component {
 
 
   constructor(props) {
-    super(props);
+    super(props)
     if (this.props.login == false){
-      Router.push('/address');
+      Router.push('/address')
     }
     this.state = {
      name:'',
@@ -4899,53 +4899,53 @@ class AddressAdd extends Component {
      memo:'',
      message:'データを入力して下さい。'
     }
-    this.logined = this.logined.bind(this);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeEmail = this.onChangeEmail.bind(this);
-    this.onChangeTel = this.onChangeTel.bind(this);
-    this.onChangeMemo = this.onChangeMemo.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.logined = this.logined.bind(this)
+    this.onChangeName = this.onChangeName.bind(this)
+    this.onChangeEmail = this.onChangeEmail.bind(this)
+    this.onChangeTel = this.onChangeTel.bind(this)
+    this.onChangeMemo = this.onChangeMemo.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
   // login,logout処理
   logined(){
-    console.log('logined.');
+    console.log('logined.')
   }
   logouted(){
-    Router.push('/address');
+    Router.push('/address')
   }
 
 
   // フィールド入力処理
   onChangeName(e){
-    this.setState({name:e.target.value});
+    this.setState({name:e.target.value})
   }
   onChangeEmail(e){
-    this.setState({email:e.target.value});
+    this.setState({email:e.target.value})
   }
   onChangeTel(e){
-    this.setState({tel:e.target.value});
+    this.setState({tel:e.target.value})
   }
   onChangeMemo(e){
-    this.setState({memo:e.target.value});
+    this.setState({memo:e.target.value})
   }
 
 
   // データの登録処理
   doAction(e){
-    let key = this.state.email;
+    let key = this.state.email
     let data = {
       name:this.state.name,
       tel:this.state.tel,
       memo:this.state.memo
     }
-    let db = firebase.database();
+    let db = firebase.database()
     let ref = db.ref('address/'
       + Lib.encodeEmail(this.props.email) + '/'
-      + Lib.encodeEmail(this.state.email));
-    console.log(ref);
-    ref.set(data);
+      + Lib.encodeEmail(this.state.email))
+    console.log(ref)
+    ref.set(data)
     this.setState({
       name:'',
       email:'',
@@ -5003,22 +5003,22 @@ class AddressAdd extends Component {
       <p>please login...</p>
       }
     </div>
-    );
+    )
   }
 }
 
 
-AddressAdd = connect((state)=> state)(AddressAdd);
-export default AddressAdd;
+AddressAdd = connect((state)=> state)(AddressAdd)
+export default AddressAdd
 
 
 
 
 ▼リスト6-20
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import AddressShow from '../components/AddressShow';
-import firebase from "firebase";
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import AddressShow from '../components/AddressShow'
+import firebase from "firebase"
 
 
 export default () =>(
@@ -5031,7 +5031,7 @@ export default () =>(
       </Link>
     </div>
   </Layout>
-);
+)
 
 
 
@@ -5039,12 +5039,12 @@ export default () =>(
 ▼リスト6-21
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import firebase from "firebase";
-import Lib from '../static/address_lib';
-import Account from '../components/Account';
+import firebase from "firebase"
+import Lib from '../static/address_lib'
+import Account from '../components/Account'
 
 
-import Router from 'next/router';
+import Router from 'next/router'
 
 
 class AddressShow extends Component {
@@ -5055,9 +5055,9 @@ class AddressShow extends Component {
 
 
   constructor(props) {
-    super(props);
+    super(props)
     if (this.props.login == false){
-      Router.push('/address');
+      Router.push('/address')
     }
     this.state = {
       last:-1,
@@ -5066,42 +5066,42 @@ class AddressShow extends Component {
       address:null,
       message:Router.query.email + 'のデータ'
     }
-    this.logined = this.logined.bind(this);
-    this.doChange = this.doChange.bind(this);
-    this.doAction = this.doAction.bind(this);
+    this.logined = this.logined.bind(this)
+    this.doChange = this.doChange.bind(this)
+    this.doAction = this.doAction.bind(this)
   }
 
 
   // login,logout処理
   logined(){
-    console.log('logined');
+    console.log('logined')
   }
   logouted(){
-    Router.push('/address');
+    Router.push('/address')
   }
 
 
   // アドレスデータの検索
   getAddress(email){
-    let db = firebase.database();
+    let db = firebase.database()
     let ref0 = db.ref('address/'
       + Lib.encodeEmail(this.props.email)
-      + '/' + Lib.encodeEmail(email) + '/check');
-    ref0.set(false);
+      + '/' + Lib.encodeEmail(email) + '/check')
+    ref0.set(false)
     let ref = db.ref('address/'
-      + Lib.encodeEmail(this.props.email));
-    let self = this;
+      + Lib.encodeEmail(this.props.email))
+    let self = this
     ref.orderByKey()
       .equalTo(Lib.encodeEmail(email))
       .on('value', (snapshot)=>{
         for(let i in snapshot.val()){
-          let d = Lib.deepcopy(snapshot.val()[i]);
+          let d = Lib.deepcopy(snapshot.val()[i])
           self.setState({
             address:d
-          });
-          break;
+          })
+          break
         }
-      });
+      })
   }
 
 
@@ -5109,25 +5109,25 @@ class AddressShow extends Component {
   doChange(e){
     this.setState({
       input:e.target.value
-    });
+    })
   }
 
 
   // メッセージ送信処理
   doAction(){
-    let from = Lib.encodeEmail(this.props.email);
-    let to = Lib.encodeEmail(this.state.email);
-    let db = firebase.database();
-    let d = new Date().getTime();
+    let from = Lib.encodeEmail(this.props.email)
+    let to = Lib.encodeEmail(this.state.email)
+    let db = firebase.database()
+    let d = new Date().getTime()
     let ref = db.ref('address/' + from + '/' + to
-      + '/messages/' + d);
-    ref.set('to: ' + this.state.input);
+      + '/messages/' + d)
+    ref.set('to: ' + this.state.input)
     let ref2 = db.ref('address/' + to + '/' + from
-      + '/messages/' + d);
-    ref2.set('from: ' + this.state.input);
+      + '/messages/' + d)
+    ref2.set('from: ' + this.state.input)
     let ref3 = db.ref('address/' + to + '/' + from
-      + '/check/');
-    ref3.set(true);
+      + '/check/')
+    ref3.set(true)
     this.setState({ input:''})
   }
 
@@ -5135,14 +5135,14 @@ class AddressShow extends Component {
   // レンダリング
   render(){
     if (this.state.address == null){
-      this.getAddress(Router.query.email);
+      this.getAddress(Router.query.email)
     }
-    let items = [];
+    let items = []
     if (this.state.address != null){
       for(let n in this.state.address.messages){
         items.unshift(<li key={n}>
           {this.state.address.messages[n]}
-        </li>);
+        </li>)
       }
     }
     return (
@@ -5195,13 +5195,13 @@ class AddressShow extends Component {
         <p>※メッセージはありません。</p>
         }
       </div>
-    );
+    )
   }
 
 
 }
-AddressShow = connect((state)=> state)(AddressShow);
-export default AddressShow;
+AddressShow = connect((state)=> state)(AddressShow)
+export default AddressShow
 
 
 
@@ -5209,80 +5209,80 @@ export default AddressShow;
 ▼リスト6-22
 class Lib{
   static deepcopy(val){
-    return JSON.parse(JSON.stringify(val));
+    return JSON.parse(JSON.stringify(val))
   }
 
 
   static encodeEmail(val){
-    return val.split(".").join("*");
+    return val.split(".").join("*")
   }
   static decodeEmail(val){
-    return val.split("*").join(".");
+    return val.split("*").join(".")
   }
 }
 
 
-export default Lib;
+export default Lib
 
 
 
 
 ▼リスト6-23
-import css from 'styled-jsx/css';
+import css from 'styled-jsx/css'
 
 
 export default <style>{`
   ……中略……
   tr {
-    margin:0px;
+    margin:0px
   }
   th {
-    font-size:14pt;
-    font-weight:plain;
-    text-align:left;
-    padding:0px 20px;
-    margin:0px;
+    font-size:14pt
+    font-weight:plain
+    text-align:left
+    padding:0px 20px
+    margin:0px
 
 
   }
   td {
-    font-size:14pt;
-    font-weight:plain;
-    text-align:left;
-    padding:0px 20px;
-    margin:0px;
+    font-size:14pt
+    font-weight:plain
+    text-align:left
+    padding:0px 20px
+    margin:0px
   }
   .label {
-    font-size:14pt;
-    margin:20px 5px;
+    font-size:14pt
+    margin:20px 5px
   }
   .login {
-    text-align:right;
+    text-align:right
   }
   .account {
-    cursor:pointer;
-    font-size:12pt;
-    padding:5px 10px;
-    color:gray;
-    border:2px solid lightgray;
+    cursor:pointer
+    font-size:12pt
+    padding:5px 10px
+    color:gray
+    border:2px solid lightgray
   }
   fieldset {
-    margin:0px 0px 30px 0px;
+    margin:0px 0px 30px 0px
   }
   input {
-    border: 0px solid white;
-    border-bottom:1px solid gray;
-    font-size:14pt;
+    border: 0px solid white
+    border-bottom:1px solid gray
+    font-size:14pt
   }
   button {
-    font-size:14pt;
-    padding: 0px 20px;
+    font-size:14pt
+    padding: 0px 20px
   }
   li {
-    font-size:14pt;
-    cursor:pointer;
+    font-size:14pt
+    cursor:pointer
   }
-`}</style>;
+`}</style>
 
 
 
@@ -5308,12 +5308,12 @@ export default <style>{`
 
 <script>
 function hello(name){
-    document.write('<p>こんにちは、' + name + 'さん！</p>');
+    document.write('<p>こんにちは、' + name + 'さん！</p>')
 }
 
 
-hello('たろう');
-hello('花子');
+hello('たろう')
+hello('花子')
 </script>
 
 
@@ -5325,12 +5325,12 @@ hello('花子');
 
 ▼リストA-2
 function a(){
-    return "hello";
+    return "hello"
 }
 
 
-let b = a;
-let c = a();
+let b = a
+let c = a()
 
 
 
@@ -5338,12 +5338,12 @@ let c = a();
 ▼リストA-3
 <script>
 function hello(getName, name){
-    document.write('<p>こんにちは、' + getName(name) + 'さん！</p>');
+    document.write('<p>こんにちは、' + getName(name) + 'さん！</p>')
 }
 
 
-hello((name)=>{ return '<b>' + name + '</b>'; }, 'たろう');
-hello((name)=>'<<<' + name + '>>>', '花子');
+hello((name)=>{ return '<b>' + name + '</b>' }, 'たろう')
+hello((name)=>'<<<' + name + '>>>', '花子')
 </script>
 
 
@@ -5358,10 +5358,10 @@ hello((name)=>'<<<' + name + '>>>', '花子');
 
 
 <script>
-let ob = {red:255, green:125, blue:0};
-document.write('<p>RED: ' + ob.red + '</p>');
-document.write('<p>GREEN:' + ob.green + '</p>');
-document.write('<p>BLUE: ' + ob.blue + '</p>');
+let ob = {red:255, green:125, blue:0}
+document.write('<p>RED: ' + ob.red + '</p>')
+document.write('<p>GREEN:' + ob.green + '</p>')
+document.write('<p>BLUE: ' + ob.blue + '</p>')
 </script>
 
 
@@ -5376,14 +5376,14 @@ let ob = {
     red:255, green:125, blue:0,
 
     print: function(){
-      document.write('<p>RED: ' + this.red + '</p>');
-      document.write('<p>GREEN:' + this.green + '</p>');
-      document.write('<p>BLUE: ' + this.blue + '</p>');
+      document.write('<p>RED: ' + this.red + '</p>')
+      document.write('<p>GREEN:' + this.green + '</p>')
+      document.write('<p>BLUE: ' + this.blue + '</p>')
     }
-};
+}
 
 
-ob.print();
+ob.print()
 
 
 
@@ -5395,8 +5395,8 @@ let ob = {
     print(){
         ……略……
     }
-};
-document.write(ob.print());
+}
+document.write(ob.print())
 
 
 
@@ -5404,46 +5404,46 @@ document.write(ob.print());
 ▼リストA-7
 class MyObj {
     constructor(r, g, b){
-        this.red = r;
-        this.green = g;
-        this.blue = b;
+        this.red = r
+        this.green = g
+        this.blue = b
     }
 
 
     get hex(){
         return '#' + ('00' + this.red.toString(16)).substr(-2)
             + ('00' + this.blue.toString(16)).substr(-2)
-            + ('00' + this.green.toString(16)).substr(-2);
+            + ('00' + this.green.toString(16)).substr(-2)
     }
 
 
     get startP(){
         return '<p style="background-color:'
-            + this.hex + '">';
+            + this.hex + '">'
     }
 
 
     get endP(){
-        return '</p>';
+        return '</p>'
     }
 
 
     print(){
-        document.write(this.startP);
-        document.write('RED:  ' + this.red + '<br/>');
-        document.write('GREEN:' + this.green + '<br/>');
-        document.write('BLUE: ' + this.blue + '<br/>');
-        document.write(this.endP);
+        document.write(this.startP)
+        document.write('RED:  ' + this.red + '<br/>')
+        document.write('GREEN:' + this.green + '<br/>')
+        document.write('BLUE: ' + this.blue + '<br/>')
+        document.write(this.endP)
     }
-};
+}
 
 
-let ob = new MyObj(255,200,200);
-ob.print();
+let ob = new MyObj(255,200,200)
+ob.print()
 
 
-let ob2 = new MyObj(0, 150, 200);
-ob2.print();
+let ob2 = new MyObj(0, 150, 200)
+ob2.print()
 
 
 
@@ -5452,22 +5452,22 @@ ob2.print();
 <script>
 class MyObj {
     constructor(r, g, b){
-        this.red = r;
-        this.green = g;
-        this.blue = b;
+        this.red = r
+        this.green = g
+        this.blue = b
     }
 
 
     get hex(){
         return '#' + ('00' + this.red.toString(16)).substr(-2)
             + ('00' + this.blue.toString(16)).substr(-2)
-            + ('00' + this.green.toString(16)).substr(-2);
+            + ('00' + this.green.toString(16)).substr(-2)
     }
 
 
     ……途中、省略……
 
-};
+}
 
 
 class UltraMyObj extends MyObj {
@@ -5475,48 +5475,48 @@ class UltraMyObj extends MyObj {
 
     get startP(){
         return '<style>'
-            + 'th { border:1px solid gray;padding:5px 20px; }'
-            + 'td { border:1px solid gray;padding:5px 20px; }'
-            + '</style><table>';
+            + 'th { border:1px solid graypadding:5px 20px }'
+            + 'td { border:1px solid graypadding:5px 20px }'
+            + '</style><table>'
   }
 
 
     get header(){
         return '<tr><th style="background-color:'
-              + this.hex + '">' + this.hex + '</th></tr>';
+              + this.hex + '">' + this.hex + '</th></tr>'
     }
 
 
     body(){
         document.write('<tr><td>RED:  '
-              + this.red + '</td></tr>');
+              + this.red + '</td></tr>')
         document.write('<tr><td>GREEN:'
-              + this.green + '</td></tr>');
+              + this.green + '</td></tr>')
         document.write('<tr><td>BLUE: '
-              + this.blue + '</td></tr>');
+              + this.blue + '</td></tr>')
     }
 
 
     get endP(){
-        return '</table>';
+        return '</table>'
     }
 
 
     print(){
-        document.write(this.startP);
-        document.write(this.header);
-        this.body();
-        document.write(this.endP);
+        document.write(this.startP)
+        document.write(this.header)
+        this.body()
+        document.write(this.endP)
     }
 }
 
 
-let ob = new MyObj(255,200,200);
-ob.print();
+let ob = new MyObj(255,200,200)
+ob.print()
 
 
-let ob2 = new UltraMyObj(0, 150, 200);
-ob2.print();
+let ob2 = new UltraMyObj(0, 150, 200)
+ob2.print()
 </script>
 
 
@@ -5527,18 +5527,18 @@ export class MyObj {
 
 
     constructor(r, g, b){
-        this.red = r;
-        this.green = g;
-        this.blue = b;
+        this.red = r
+        this.green = g
+        this.blue = b
     }
 
 
     printData(){
         return '<p>RED: ' + this.red + '</p>'
             + '<p>GREEN:' + this.green + '</p>'
-            + '<p>BLUE: ' + this.blue + '</p>';
+            + '<p>BLUE: ' + this.blue + '</p>'
     }
-};
+}
 
 
 
@@ -5550,10 +5550,10 @@ export class MyObj {
 
 
 <script type="module">
-import {MyObj} from './script.js';
+import {MyObj} from './script.js'
 
 
-let ob = new MyObj(255, 200, 100);
-document.getElementById("stage").innerHTML = ob.printData();
+let ob = new MyObj(255, 200, 100)
+document.getElementById("stage").innerHTML = ob.printData()
 </script>
 </body>

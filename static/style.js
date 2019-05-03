@@ -69,6 +69,7 @@ th {
 .wrapper {
   width: 1000px;
   margin: auto;
+  position: relative;
 }
 .glHeader {
   display: flex;
@@ -80,11 +81,11 @@ th {
   width: 150px;
 }
 .subtitle {
-  margin-right: 20px;
+  margin-right: 115px;
 }
 .mainImg {
   mix-blend-mode: screen;
-  width: 60%;
+  width: 100%;
 }
 .btn {
   padding: 10px 30px;
@@ -145,5 +146,50 @@ p {
 }
 .firetable tr:nth-child(even) td {
   background-color: #eee;
+}
+.account {
+  border: 1px dashed #ccc;
+  padding: 3px 30px;
+  border-radius: 3px;
+  color: #999;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  background: linear-gradient(#efefef,#fff);
+}
+.username {
+  color: #c66;
+  font-weight: bold;
+  font-size: 18px;
+}
+.listTitle {
+  display: inline-block;
+  width: 80px;
+}
+.list p {
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.adslist {
+  cursor: pointer;
+}
+.adstitle {
+  font-size: 16px;
+  border-bottom: 1px dotted #ccc;
+  margin: 15px 0;
+  padding: 15px 5px;
+  background: linear-gradient(90deg, #eee, #fff)
+}
+.adstitle::before {
+  content: "■";
+  color: #333;
+  margin-right: 5px;
+}
+.firetable tr.adslist:hover td {
+  background-color: rgba(222,222,222,.6);
+  font-weight: bold;
 }
 `}</style>

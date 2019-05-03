@@ -20,6 +20,11 @@ export default fireapp
 
 // ステート初期値
 const initial = {
+  login: false,
+  username: '(click here!)',
+  email: '',
+  data: [],
+  items: [],
   message: 'START',
   count: 0,
   data: [],
@@ -27,8 +32,8 @@ const initial = {
   result: 0
 }
 
-// 計算機レデューサー
-function calcReducer(state = initial, action) {
+// レデューサー
+function allReducer(state = initial, action) {
   switch (action.type) {
     // 計算実行
     case 'ENTER':
@@ -55,7 +60,8 @@ function calcReducer(state = initial, action) {
         message: 'DECREMENT',
         count: state.count - 1
       };
-    // リセット
+    case 'UPDATE_USER':
+      return action.value;
     case 'RESET':
       return {
         message: 'RESET',
@@ -64,7 +70,6 @@ function calcReducer(state = initial, action) {
         number: [],
         result: 0
       };
-    // デフォルト
     default:
       return state;
   }
@@ -72,34 +77,5 @@ function calcReducer(state = initial, action) {
 
 // initStore関数
 export function initStore(state = initial) {
-  return createStore(calcReducer, state, applyMiddleware(thunkMiddleware))
+  return createStore(allReducer, state, applyMiddleware(thunkMiddleware))
 }
-
-// カウンターレデューサー
-// function counterReducer(state = initial, action) {
-//   switch (action.type) {
-//     case 'INCREMENT':
-//       return {
-//         message: 'INCREMENT',
-//         count: state.count + 1
-//       };
-//     case 'DECREMENT':
-//       return {
-//         message: 'DECREMENT',
-//         count: state.count - 1
-//       };
-//     case 'RESET':
-//       return {
-//         message: 'RESET',
-//         count: initial.count
-//       };
-//     default:
-//       return state;
-//   }
-// }
-
-// intialStore関数(redux-store.jsで必要)
-// export function initStore(state = initial) {
-//   return createStore(counterReducer, state,
-//   applyMiddleware(thunkMiddleware))
-// }
